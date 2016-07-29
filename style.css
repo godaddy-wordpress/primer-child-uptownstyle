@@ -1,0 +1,178 @@
+/*
+Theme Name: Uptown
+Theme URI: http://liftux.com
+Author: Lift
+Author URI: http://liftux.com
+Description: This is a child theme for Primer.
+Version: 0.0.9
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: uptown
+Domain Path: /languages/
+Tags:
+Template: primer
+
+This theme, like WordPress, is licensed under the GPL.
+
+*/
+/*--------------------------------------------------------------
+Variables
+--------------------------------------------------------------*/
+.site-header {
+  text-align: center; }
+
+.hero {
+  background: url(".dev/img/header.jpg") no-repeat center center;
+  background-size: cover; }
+  .hero .widget {
+    border: 3px solid #ffffff;
+    margin: 60px 0;
+    padding: 80px; }
+    .hero .widget h1 {
+      color: #ffffff;
+      font-size: 5.5rem;
+      line-height: 1;
+      text-align: left; }
+
+.site-title-wrapper {
+  float: none;
+  padding: 0; }
+
+.site-title {
+  padding: 30px 0 0; }
+
+.main-navigation-container {
+  background: #ffffff;
+  padding: 16px 0 16px; }
+
+.site-header .site-header-wrapper .main-navigation {
+  margin: 0; }
+
+.menu-main-menu-container {
+  line-height: 0; }
+
+.main-navigation {
+  background: none;
+  margin: 0; }
+  .main-navigation ul {
+    display: inline-block;
+    text-align: center; }
+    .main-navigation ul li {
+      margin: 0 12px; }
+      .main-navigation ul li a {
+        color: #202223;
+        font-size: .875rem;
+        font-weight: bold;
+        padding: 0;
+        text-transform: uppercase; }
+
+@media only screen and (min-width: 64.063em) {
+  .footer-widget-area .footer-widget {
+    width: 33%; } }
+
+.footer-widget-area .footer-widget .widget {
+  background-color: transparent;
+  font-size: .875rem; }
+  .footer-widget-area .footer-widget .widget ul,
+  .footer-widget-area .footer-widget .widget li,
+  .footer-widget-area .footer-widget .widget a,
+  .footer-widget-area .footer-widget .widget p {
+    font-size: .875rem; }
+
+.footer-widget-area .footer-widget .widget-title {
+  border-bottom: none;
+  font-size: 1rem;
+  font-style: normal;
+  text-transform: uppercase; }
+
+.site-info-wrapper {
+  background: #191919;
+  color: #606365;
+  margin: 0 auto;
+  padding: 50px 0; }
+  .site-info-wrapper a {
+    color: #606365; }
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .footer-nav ul li {
+    display: inline-block;
+    font-size: .875rem;
+    margin: 0 15px;
+    text-align: center;
+    text-transform: uppercase; }
+    @media only screen and (min-width: 64.063em) {
+      .footer-nav ul li {
+        text-align: left; } }
+    .footer-nav ul li a {
+      color: #ffffff; }
+
+.site-info-wrapper .site-info {
+  overflow: visible; }
+  .site-info-wrapper .site-info .social-menu a {
+    background: none; }
+
+.site-info-text {
+  font-size: .875rem; }
+
+.social-menu {
+  position: relative;
+  top: -20px; }
+
+body {
+  color: #202223;
+  line-height: 1.3em; }
+
+h1 {
+  font-size: 3.125rem;
+  font-weight: 100; }
+
+h2 {
+  color: #c5c3c6;
+  font-size: 2.5rem; }
+
+h3 {
+  font-size: 2.25rem; }
+
+h4 {
+  color: #d24343;
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.625rem; }
+
+h6 {
+  font-size: 1.625rem;
+  font-style: italic; }
+
+p {
+  font-size: 1rem;
+  line-height: 30px; }
+
+button,
+a.button,
+.fl-button {
+  background: none;
+  border-radius: 0;
+  border-bottom: 1px solid #ffffff;
+  padding: 6px 0; }
+
+.widget {
+  background: none;
+  color: #ffffff; }
+
+.single .entry-header {
+  border-bottom: 1px solid #5c6d7c;
+  border-top: 1px solid #5c6d7c;
+  margin: 50px 0;
+  padding: 30px 0;
+  text-align: center; }
+
+.single .entry-title {
+  margin-top: 0; }
+
+.single .entry-meta {
+  margin: 0;
+  padding: 0; }

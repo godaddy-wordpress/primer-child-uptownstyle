@@ -1,0 +1,37 @@
+.main-navigation-container {
+	background: $color-white;
+	padding: 16px 0 16px;
+}
+
+.site-header .site-header-wrapper .main-navigation {
+	margin: 0;
+}
+
+.menu-main-menu-container {
+	line-height: 0;
+}
+
+.main-navigation {
+	background: none;
+	margin: 0;
+
+	ul {
+		display: inline-block;
+		text-align: center;
+
+		li {
+			margin: 0 12px;
+
+			a {
+				color: $color-text;
+				font-size: .875rem;
+				font-weight: bold;
+				padding: 0;
+				text-transform: uppercase;
+			}
+
+		}
+
+	}
+
+}
