@@ -36,7 +36,9 @@
 					a {
 
 						&:after {
-							border-color: $color-text;
+							border-bottom: 7px solid $color-white;
+							border-left: 7px solid $color-text;
+							border-top: 9px solid $color-white;
 						}
 
 					}
