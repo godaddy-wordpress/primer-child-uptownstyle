@@ -42,7 +42,7 @@
 
 }
 
-.main-navigation .sub-menu .menu-item-has-children > a::after {
+.main-navigation .sub-menu .menu-item-has-children > .menu-item a::after {
 	border-bottom: 7px solid $color-white;
 	border-left: 7px solid $color-text;
 	border-top: 9px solid $color-white;

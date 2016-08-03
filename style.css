@@ -95,7 +95,7 @@ Variables
           margin: 0;
           padding: 12px; }
 
-.main-navigation .sub-menu .menu-item-has-children > a::after {
+.main-navigation .sub-menu .menu-item-has-children > .menu-item a::after {
   border-bottom: 7px solid #ffffff;
   border-left: 7px solid #202223;
   border-top: 9px solid #ffffff; }
