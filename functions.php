@@ -108,14 +108,18 @@ function uptown_update_custom_header_args( $args ) {
 add_filter( 'primer_custom_header_args', 'uptown_update_custom_header_args' );
 
 /**
- * Display hero in the header
+ * Add hero after header if we are on a post or front page.
  *
- * @action uptown_header
+ * @action primer_after_header
+ * @since 1.0.0
  */
 function uptown_add_hero() {
-	get_template_part( 'templates/parts/hero' );
+
+	remove_action( 'primer_header', 'primer_add_hero', 10 );
+	add_action( 'primer_after_header', 'primer_add_hero', 20 );
+
 }
-add_action( 'primer_after_header', 'uptown_add_hero', 25 );
+add_action( 'after_setup_theme', 'uptown_add_hero' );
 
 /**
  * Get header image with image size
