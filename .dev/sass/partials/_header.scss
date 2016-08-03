@@ -5,17 +5,43 @@
 .hero {
 	background: url('.dev/img/header.jpg') no-repeat center center;
 	background-size: cover;
+	position: relative;
+	top: 0;
+	left: 0;
 
-	.widget {
-		border: 3px solid $color-white;
-		margin: 60px 0;
-		padding: 80px;
+	.hero-wrapper {
+		padding: 60px 0;
 
-		h1 {
-			color: $color-white;
-			font-size: 5.5rem;
-			line-height: 1;
-			text-align: left;
+		.widget {
+			border: 3px solid $color-white;
+			margin: 0;
+			padding: 80px;
+			text-align: center;
+
+			h1 {
+				color: $color-white;
+				display: inline-block;
+				font-size: 3.75rem;
+				font-variant: small-caps;
+				font-weight: bold;
+				line-height: 1;
+				text-align: left;
+			}
+
+			p {
+				font-size: 1.25rem;
+			}
+
+			a {
+				background-color: transparent;
+				border: 2px solid $color-white;
+				font-size: 1.125rem;
+				font-variant: small-caps;
+				font-weight: bold;
+				letter-spacing: .2em;
+				padding: 1rem 2rem;
+			}
+
 		}
 
 	}
@@ -29,4 +55,15 @@
 
 .site-title {
 	padding: 30px 0 0;
+}
+
+@media only screen and (min-width: 64.063em) {
+
+	.row,
+	.footer-widget-area {
+		max-width: 1100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 }

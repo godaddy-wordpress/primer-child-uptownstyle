@@ -23,16 +23,35 @@ Variables
 
 .hero {
   background: url(".dev/img/header.jpg") no-repeat center center;
-  background-size: cover; }
-  .hero .widget {
-    border: 3px solid #ffffff;
-    margin: 60px 0;
-    padding: 80px; }
-    .hero .widget h1 {
-      color: #ffffff;
-      font-size: 5.5rem;
-      line-height: 1;
-      text-align: left; }
+  background-size: cover;
+  position: relative;
+  top: 0;
+  left: 0; }
+  .hero .hero-wrapper {
+    padding: 60px 0; }
+    .hero .hero-wrapper .widget {
+      border: 3px solid #ffffff;
+      margin: 0;
+      padding: 80px;
+      text-align: center; }
+      .hero .hero-wrapper .widget h1 {
+        color: #ffffff;
+        display: inline-block;
+        font-size: 3.75rem;
+        font-variant: small-caps;
+        font-weight: bold;
+        line-height: 1;
+        text-align: left; }
+      .hero .hero-wrapper .widget p {
+        font-size: 1.25rem; }
+      .hero .hero-wrapper .widget a {
+        background-color: transparent;
+        border: 2px solid #ffffff;
+        font-size: 1.125rem;
+        font-variant: small-caps;
+        font-weight: bold;
+        letter-spacing: .2em;
+        padding: 1rem 2rem; }
 
 .site-title-wrapper {
   float: none;
@@ -41,15 +60,18 @@ Variables
 .site-title {
   padding: 30px 0 0; }
 
+@media only screen and (min-width: 64.063em) {
+  .row,
+  .footer-widget-area {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto; } }
+
 .main-navigation-container {
-  background: #ffffff;
-  padding: 16px 0 16px; }
+  padding: 12px 0 6px; }
 
 .site-header .site-header-wrapper .main-navigation {
   margin: 0; }
-
-.menu-main-menu-container {
-  line-height: 0; }
 
 .main-navigation {
   background: none;

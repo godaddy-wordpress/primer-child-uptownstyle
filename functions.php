@@ -11,18 +11,14 @@ function activation_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'activation_theme_enqueue_styles' );
 
 /**
- * Register custom Custom Navigation Menus.
  *
- * @link https://codex.wordpress.org/Function_Reference/register_nav_menus
+ * Register Footer Menu.
+ *
  */
-function uptown_register_site_info_menu() {
-	register_nav_menus(
-		array(
-			'site-info' => esc_html__( 'Site Info', 'uptown' ),
-		)
-	);
+function uptown_theme_register_nav_menu() {
+	 register_nav_menu( 'footer', __( 'Footer Menu', 'uptown' ) );
 }
-add_action( 'after_setup_theme', 'uptown_register_site_info_menu' );
+add_action( 'after_setup_theme', 'uptown_theme_register_nav_menu' );
 
 /**
  * Remove primer navigation and add uptown navigation
@@ -42,6 +38,17 @@ function uptown_add_mobile_menu() {
 	get_template_part( 'templates/parts/mobile-menu' );
 }
 add_action( 'primer_header', 'uptown_add_mobile_menu', 0 );
+
+/**
+ *
+ * Adding content to footer via action.
+ *
+ */
+function uptown_theme_footer_content() {
+	return;
+}
+add_action( 'primer_footer', 'uptown_theme_footer_content' );
+
 /**
  * Move navigation from after_header to header
  *
@@ -152,3 +159,182 @@ function uptown_get_header_image() {
 	$header_image = get_header_image();
 	return $header_image;
 }
+
+/**
+ * Update colors
+ *
+ * @action primer_colors
+ */
+function velux_colors() {
+	return array(
+		array(
+			'name'    => 'link_color',
+			'label'   => __( 'Link Color', 'primer' ),
+			'default' => '#51748e',
+			'css'     => array(
+				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'header_textcolor',
+			'default' => '#212121',
+			'css'     => array(
+				'.side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'background_color',
+			'default' => '#fff',
+			'css'     => array(
+				'body' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'main_text_color',
+			'label'   => __( 'Main Text Color', 'primer' ),
+			'default' => '#212121',
+			'css'     => array(
+				'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'secondary_text_color',
+			'label'   => __( 'Secondary Text Color', 'primer' ),
+			'default' => '#999999',
+			'css'     => array(
+				'.side-masthead .social-menu a, .entry-meta li, .side-masthead .social-menu a:hover' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'button_color',
+			'label'   => __( 'Button Color', 'primer' ),
+			'default' => '#8e452a',
+			'css'     => array(
+				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'w_text_color',
+			'label'   => __( 'Widget Text Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.footer-widget-area, .footer-widget .widget-title, .site-footer, .footer-widget-area .footer-widget .widget, .footer-widget-area .footer-widget .widget-title' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'w_background_color',
+			'label'   => __( 'Widget Background Color', 'primer' ),
+			'default' => '#212121',
+			'css'     => array(
+				'.site-footer' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'footer_textcolor',
+			'label'   => __( 'Footer Text Color', 'primer' ),
+			'default' => '#fff',
+			'css'     => array(
+				'.site-info-wrapper a, .site-info .social-menu a' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'footer_backgroundcolor',
+			'label'   => __( 'Footer Background Color', 'primer' ),
+			'default' => '#191919',
+			'css'     => array(
+				'.site-info-wrapper, .footer-nav, .site-info-wrapper' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+	);
+}
+add_action( 'primer_colors', 'velux_colors', 9 );
+
+/**
+ * Change velux color schemes
+ *
+ * @action primer_color_schemes
+ * @since 1.0.0
+ * @return array
+ */
+function velux_color_schemes() {
+	return array(
+		'dark_blue' => array(
+			'label'  => esc_html__( 'Dark Blue', 'velux' ),
+			'colors' => array(
+				'header_textcolor'         => '#ffffff',
+				'background_color'         => '#ffffff',
+				'link_color'               => '#363a3d',
+				'main_text_color'          => '#202223',
+				'secondary_text_color'     => '#ffffff',
+				'button_color'			   => '#3f7b84',
+				'w_text_color'			   => '#ffffff',
+				'w_background_color'	   => '#212121',
+				'footer_textcolor'		   => '#ffffff',
+				'footer_backgroundcolor'   => '#191919',
+			),
+		),
+	);
+}
+add_action( 'primer_color_schemes', 'velux_color_schemes' );
+
+/**
+ *
+ * Add selectors for font customizing.
+ *
+ * @since 1.0.0
+ */
+function update_font_types() {
+	return	array(
+		array(
+			'name'    => 'primary_font',
+			'label'   => __( 'Primary Font', 'primer' ),
+			'default' => 'Lato',
+			'css'     => array(
+				'body, p, .hero-wrapper .textwidget p, .site-description, .search-form input[type="search”], .widget li a, .site-info-text, h6, body p, .widget p, ' => array(
+					'font-family' => '"%s", sans-serif',
+				),
+			),
+		),
+		array(
+			'name'    => 'secondary_font',
+			'label'   => __( 'Secondary Font', 'primer' ),
+			'default' => 'Lato',
+			'css'     => array(
+				'label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], blockquote, .entry-meta, .entry-footer, .comment-list li .comment-meta .says, .comment-list li .comment-metadata, .comment-reply-link, #respond .logged-in-as, .fl-callout-text, .site-title, .hero-wrapper .textwidget h1, .hero-wrapper .textwidget .button, .main-navigation li a, .widget-title, .footer-nav ul li a' => array(
+					'font-family' => '"%s", serif',
+				),
+			),
+		),
+		array(
+			'name'    => 'header_font',
+			'label'   => esc_html__( 'Header Font', 'primer' ),
+			'default' => 'Playfair Display',
+			'css'     => array(
+				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], .entry-title, .single .entry-meta, .hero .widget h1' => array(
+					'font-family' => '"%s", sans-serif',
+				),
+			),
+		),
+	);
+}
+add_action( 'primer_font_types', 'update_font_types' );
