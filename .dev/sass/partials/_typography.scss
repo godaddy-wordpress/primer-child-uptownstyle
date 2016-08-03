@@ -39,6 +39,14 @@ p {
 }
 
 a {
+	color: $color-link;
+
+	&:link,
+	&:visited,
+	&:hover,
+	&:active {
+		color: $color-link;
+	}
 
 }
 

@@ -185,14 +185,14 @@ Variables
     margin: 0 2px; }
   .footer-nav .social-menu a {
     background: none;
-    color: #b5345f;
+    color: #54ccbe;
     height: 46px;
     width: 46px; }
     .footer-nav .social-menu a:before {
       font-size: 1.85rem; }
     .footer-nav .social-menu a:link, .footer-nav .social-menu a:visited, .footer-nav .social-menu a:hover, .footer-nav .social-menu a:active {
       background: none;
-      color: #b5345f; }
+      color: #54ccbe; }
 
 .site-info-wrapper a,
 .site-info .social-menu a {
@@ -234,6 +234,11 @@ h6 {
 p {
   font-size: 1rem;
   line-height: 30px; }
+
+a {
+  color: #54ccbe; }
+  a:link, a:visited, a:hover, a:active {
+    color: #54ccbe; }
 
 button,
 a.button,
