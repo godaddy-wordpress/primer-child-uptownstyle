@@ -185,14 +185,14 @@ Variables
     margin: 0 2px; }
   .footer-nav .social-menu a {
     background: none;
-    color: #54ccbe;
+    color: #b5345f;
     height: 46px;
     width: 46px; }
     .footer-nav .social-menu a:before {
       font-size: 1.85rem; }
     .footer-nav .social-menu a:link, .footer-nav .social-menu a:visited, .footer-nav .social-menu a:hover, .footer-nav .social-menu a:active {
       background: none;
-      color: #54ccbe; }
+      color: #b5345f; }
 
 .site-info-wrapper a,
 .site-info .social-menu a {
