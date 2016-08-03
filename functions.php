@@ -149,9 +149,7 @@ add_filter( 'primer_custom_header_args', 'uptown_update_custom_header_args' );
  * @action uptown_header
  */
 function uptown_add_hero() {
-	if ( is_front_page() || is_singular() && is_active_sidebar( 'hero' ) ) {
-		get_template_part( 'templates/parts/hero' );
-	}
+	get_template_part( 'templates/parts/hero' );
 }
 add_action( 'primer_after_header', 'uptown_add_hero', 25 );
 

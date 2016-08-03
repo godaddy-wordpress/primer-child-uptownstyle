@@ -11,6 +11,16 @@
 	margin-bottom: 20px;
 }
 
+.site-title a:hover,
+.site-title a:visited:hover {
+	color: $color-text;
+}
+
+.entry-title a:hover,
+.entry-title a:visited:hover {
+	color: $color-text;
+}
+
 .hero {
 	background: url('.dev/img/header.jpg') no-repeat center center;
 	background-size: cover;

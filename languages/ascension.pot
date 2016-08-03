@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-03 13:07-0400\n"
+"POT-Creation-Date: 2016-08-03 13:33-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,55 +30,55 @@ msgstr ""
 msgid "The Hero widget area."
 msgstr ""
 
-#: functions.php:186
+#: functions.php:184
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:214
+#: functions.php:212
 msgid "Main Text Color"
 msgstr ""
 
-#: functions.php:224
+#: functions.php:222
 msgid "Secondary Text Color"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:232
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:244
+#: functions.php:242
 msgid "Widget Text Color"
 msgstr ""
 
-#: functions.php:254
+#: functions.php:252
 msgid "Widget Background Color"
 msgstr ""
 
-#: functions.php:264
+#: functions.php:262
 msgid "Footer Social Icon Color"
 msgstr ""
 
-#: functions.php:274
+#: functions.php:272
 msgid "Footer Menu Text Color"
 msgstr ""
 
-#: functions.php:284
+#: functions.php:282
 msgid "Footer Text Color"
 msgstr ""
 
-#: functions.php:294
+#: functions.php:292
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:316
+#: functions.php:314
 msgid "Bronze"
 msgstr ""
 
-#: functions.php:346
+#: functions.php:344
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:356
+#: functions.php:354
 msgid "Header Font"
 msgstr ""
 
@@ -108,6 +108,15 @@ msgstr[1] ""
 #. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
 #: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
 msgid "yyyy-mm-dd"
+msgstr ""
+
+#. //developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+#. *
+#. * @package Primer
+#. * @since 1.0.0
+#.
+#: templates/parts/hero.php:12 templates/parts/hero.php:30
+msgid "Blog"
 msgstr ""
 
 #: templates/parts/loop/post-meta.php:13

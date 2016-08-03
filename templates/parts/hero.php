@@ -6,11 +6,28 @@
 
 			<?php dynamic_sidebar( 'hero' ); ?>
 
-		<?php elseif ( is_singular() ) : ?>
+		<?php elseif ( is_single() ) : ?>
 
 			<div class="widget single-widget">
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lady.png" alt="<?php bloginfo( 'name' ) ?>" />
-				<h1 class="site-title"><?php bloginfo( 'name' ) ?></h1>
+				<h1 class="site-title"><?php esc_html_e( 'Blog', 'uptown' ); ?></h1>
+			</div>
+
+		<?php elseif ( is_page() ) : ?>
+
+			<div class="widget single-widget">
+				<h1 class="site-title"><?php the_title(); ?></h1>
+			</div>
+
+		<?php elseif ( is_archive() ) : ?>
+
+			<div class="widget single-widget">
+				<h1 class="site-title"><?php post_type_archive_title(); ?></h1>
+			</div>
+
+		<?php elseif ( is_home() ) : ?>
+
+			<div class="widget single-widget">
+				<h1 class="site-title"><?php esc_html_e( 'Blog', 'uptown' ); ?></h1>
 			</div>
 
 		<?php endif; ?>

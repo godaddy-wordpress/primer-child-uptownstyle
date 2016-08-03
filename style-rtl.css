@@ -28,6 +28,14 @@ Variables
 .site-description {
   margin-bottom: 20px; }
 
+.site-title a:hover,
+.site-title a:visited:hover {
+  color: #000000; }
+
+.entry-title a:hover,
+.entry-title a:visited:hover {
+  color: #000000; }
+
 .hero {
   background: url(".dev/img/header.jpg") no-repeat center center;
   background-size: cover;
@@ -119,7 +127,11 @@ Variables
   color: #000000; }
 
 .side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title {
-  color: #000; }
+  color: #000000; }
+
+.main-navigation a:hover,
+.main-navigation a:visited:hover {
+  color: #000000; }
 
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
