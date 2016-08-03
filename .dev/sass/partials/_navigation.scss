@@ -26,6 +26,25 @@
 				text-transform: uppercase;
 			}
 
+			ul {
+				background: none;
+
+				li {
+					margin: 0;
+					padding: 12px;
+
+					a {
+
+						&:after {
+							color: $color-text;
+						}
+
+					}
+
+				}
+
+			}
+
 		}
 
 	}

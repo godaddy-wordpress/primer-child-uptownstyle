@@ -89,6 +89,13 @@ Variables
         font-weight: bold;
         padding: 0;
         text-transform: uppercase; }
+      .main-navigation ul li ul {
+        background: none; }
+        .main-navigation ul li ul li {
+          margin: 0;
+          padding: 12px; }
+          .main-navigation ul li ul li a:after {
+            color: #202223; }
 
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
