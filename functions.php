@@ -50,6 +50,20 @@ function uptown_theme_footer_content() {
 add_action( 'primer_footer', 'uptown_theme_footer_content' );
 
 /**
+ * Display the footer nav before the site info.
+ *
+ * @action primer_after_footer
+ *
+ * @since 1.0.0
+ */
+function uptown_add_nav_footer() {
+
+	get_template_part( 'templates/parts/footer-nav' );
+
+}
+add_action( 'primer_after_footer', 'uptown_add_nav_footer', 10 );
+
+/**
  * Move navigation from after_header to header
  *
  * @link https://codex.wordpress.org/Function_Reference/remove_action
@@ -135,7 +149,7 @@ add_filter( 'primer_custom_header_args', 'uptown_update_custom_header_args' );
  * @action uptown_header
  */
 function uptown_add_hero() {
-	if ( is_front_page() && is_active_sidebar( 'hero' ) ) {
+	if ( is_front_page() || is_singular() && is_active_sidebar( 'hero' ) ) {
 		get_template_part( 'templates/parts/hero' );
 	}
 }
@@ -165,12 +179,12 @@ function uptown_get_header_image() {
  *
  * @action primer_colors
  */
-function velux_colors() {
+function uptown_colors() {
 	return array(
 		array(
 			'name'    => 'link_color',
 			'label'   => __( 'Link Color', 'primer' ),
-			'default' => '#51748e',
+			'default' => '#54ccbe',
 			'css'     => array(
 				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget .widget a' => array(
 					'color' => '%1$s',
@@ -179,7 +193,7 @@ function velux_colors() {
 		),
 		array(
 			'name'    => 'header_textcolor',
-			'default' => '#212121',
+			'default' => '#000000',
 			'css'     => array(
 				'.side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title' => array(
 					'color' => '%1$s',
@@ -188,7 +202,7 @@ function velux_colors() {
 		),
 		array(
 			'name'    => 'background_color',
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'body' => array(
 					'background-color' => '%1$s',
@@ -218,7 +232,7 @@ function velux_colors() {
 		array(
 			'name'    => 'button_color',
 			'label'   => __( 'Button Color', 'primer' ),
-			'default' => '#8e452a',
+			'default' => '#b5345f',
 			'css'     => array(
 				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
 					'background-color' => '%1$s',
@@ -228,7 +242,7 @@ function velux_colors() {
 		array(
 			'name'    => 'w_text_color',
 			'label'   => __( 'Widget Text Color', 'primer' ),
-			'default' => '#fff',
+			'default' => '#ffffff',
 			'css'     => array(
 				'.footer-widget-area, .footer-widget .widget-title, .site-footer, .footer-widget-area .footer-widget .widget, .footer-widget-area .footer-widget .widget-title' => array(
 					'color' => '%1$s',
@@ -238,7 +252,7 @@ function velux_colors() {
 		array(
 			'name'    => 'w_background_color',
 			'label'   => __( 'Widget Background Color', 'primer' ),
-			'default' => '#212121',
+			'default' => '#3f3244',
 			'css'     => array(
 				'.site-footer' => array(
 					'background-color' => '%1$s',
@@ -246,9 +260,29 @@ function velux_colors() {
 			),
 		),
 		array(
+			'name'    => 'footer_socialcolor',
+			'label'   => __( 'Footer Social Icon Color', 'primer' ),
+			'default' => '#b5345f',
+			'css'     => array(
+				'.site-info-wrapper a, .site-info .social-menu a' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
+			'name'    => 'footer_menu_textcolor',
+			'label'   => __( 'Footer Menu Text Color', 'primer' ),
+			'default' => '#212121',
+			'css'     => array(
+				'.footer-nav ul li a' => array(
+					'color' => '%1$s',
+				),
+			),
+		),
+		array(
 			'name'    => 'footer_textcolor',
 			'label'   => __( 'Footer Text Color', 'primer' ),
-			'default' => '#fff',
+			'default' => '#898989',
 			'css'     => array(
 				'.site-info-wrapper a, .site-info .social-menu a' => array(
 					'color' => '%1$s',
@@ -258,7 +292,7 @@ function velux_colors() {
 		array(
 			'name'    => 'footer_backgroundcolor',
 			'label'   => __( 'Footer Background Color', 'primer' ),
-			'default' => '#191919',
+			'default' => '#ffffff',
 			'css'     => array(
 				'.site-info-wrapper, .footer-nav, .site-info-wrapper' => array(
 					'background-color' => '%1$s',
@@ -267,35 +301,37 @@ function velux_colors() {
 		),
 	);
 }
-add_action( 'primer_colors', 'velux_colors', 9 );
+add_action( 'primer_colors', 'uptown_colors', 9 );
 
 /**
- * Change velux color schemes
+ * Change uptown color schemes
  *
  * @action primer_color_schemes
  * @since 1.0.0
  * @return array
  */
-function velux_color_schemes() {
+function uptown_color_schemes() {
 	return array(
-		'dark_blue' => array(
-			'label'  => esc_html__( 'Dark Blue', 'velux' ),
+		'bronze' => array(
+			'label'  => esc_html__( 'Bronze', 'uptown' ),
 			'colors' => array(
-				'header_textcolor'         => '#ffffff',
+				'header_textcolor'         => '#000000',
 				'background_color'         => '#ffffff',
-				'link_color'               => '#363a3d',
-				'main_text_color'          => '#202223',
-				'secondary_text_color'     => '#ffffff',
-				'button_color'			   => '#3f7b84',
-				'w_text_color'			   => '#ffffff',
-				'w_background_color'	   => '#212121',
-				'footer_textcolor'		   => '#ffffff',
-				'footer_backgroundcolor'   => '#191919',
+				'link_color'               => '#c19072',
+				'main_text_color'          => '#000000',
+				'secondary_text_color'     => '#000000',
+				'button_color'			   => '#aeaeae',
+				'w_text_color'			   => '#000000',
+				'w_background_color'	   => '#ffffff',
+				'footer_socialcolor'       => '#c19072',
+				'footer_menu_textcolor'    => '#000000',
+				'footer_textcolor'		   => '#000000',
+				'footer_backgroundcolor'   => '#ffffff',
 			),
 		),
 	);
 }
-add_action( 'primer_color_schemes', 'velux_color_schemes' );
+add_action( 'primer_color_schemes', 'uptown_color_schemes' );
 
 /**
  *

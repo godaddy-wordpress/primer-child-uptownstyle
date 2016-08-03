@@ -47,3 +47,23 @@
 	border-left: 7px solid $color-text;
 	border-top: 9px solid $color-white;
 }
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+	background-color: transparent;
+}
+
+.main-navigation li > a {
+
+	&:hover {
+		background-color: transparent;
+		color: $color-text;
+	}
+
+}
+
+.side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title {
+	color: #000;
+}

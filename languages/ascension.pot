@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-02 20:59-0400\n"
+"POT-Creation-Date: 2016-08-03 12:11-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,59 +22,67 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:96
+#: functions.php:110
 msgid "Hero"
 msgstr ""
 
-#: functions.php:98
+#: functions.php:112
 msgid "The Hero widget area."
 msgstr ""
 
-#: functions.php:172
+#: functions.php:186
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:200
+#: functions.php:214
 msgid "Main Text Color"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:224
 msgid "Secondary Text Color"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:234
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:230
+#: functions.php:244
 msgid "Widget Text Color"
 msgstr ""
 
-#: functions.php:240
+#: functions.php:254
 msgid "Widget Background Color"
 msgstr ""
 
-#: functions.php:250
+#: functions.php:264
+msgid "Footer Social Icon Color"
+msgstr ""
+
+#: functions.php:274
+msgid "Footer Menu Text Color"
+msgstr ""
+
+#: functions.php:284
 msgid "Footer Text Color"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:294
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:282
-msgid "Dark Blue"
+#: functions.php:316
+msgid "Bronze"
 msgstr ""
 
-#: functions.php:310
+#: functions.php:346
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:320
+#: functions.php:356
 msgid "Secondary Font"
 msgstr ""
 
-#: functions.php:330
+#: functions.php:366
 msgid "Header Font"
 msgstr ""
 
@@ -104,4 +112,16 @@ msgstr[1] ""
 #. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
 #: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
 msgid "yyyy-mm-dd"
+msgstr ""
+
+#: templates/parts/loop/post-meta.php:13
+#, php-format
+msgctxt "1. post date, 2. author name"
+msgid "%1$s &mdash; %2$s"
+msgstr ""
+
+#: templates/parts/site-info.php:17
+#, php-format
+msgctxt "1. theme name link, 2. theme author link"
+msgid "%1$s theme by %2$s"
 msgstr ""

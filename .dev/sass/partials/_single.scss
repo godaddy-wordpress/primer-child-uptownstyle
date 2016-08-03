@@ -1,10 +1,7 @@
 .single {
 
 	.entry-header {
-		border-bottom: 1px solid $color-border;
-		border-top: 1px solid $color-border;
-		margin: 50px 0;
-		padding: 30px 0;
+		padding: 30px 0 0;
 		text-align: center;
 	}
 
@@ -14,7 +11,8 @@
 
 	.entry-meta {
 		margin: 0;
-		padding: 0;
+		padding: 0 0 15px;
+		text-align: center;
 	}
 
 }

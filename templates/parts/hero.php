@@ -2,7 +2,18 @@
 
 	<div class="hero-wrapper row">
 
-		<?php dynamic_sidebar( 'hero' ); ?>
+		<?php if ( is_front_page() ) : ?>
+
+			<?php dynamic_sidebar( 'hero' ); ?>
+
+		<?php elseif ( is_singular() ) : ?>
+
+			<div class="widget single-widget">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/lady.png" alt="<?php bloginfo( 'name' ) ?>" />
+				<h1 class="site-title"><?php bloginfo( 'name' ) ?></h1>
+			</div>
+
+		<?php endif; ?>
 
 	</div>
 

@@ -9,6 +9,8 @@
 .footer-widget-area {
 
 	.footer-widget {
+		border: 2px solid transparentize($color-white, 0.83);
+		min-height: 250px;
 
 		.widget {
 			background-color: transparent;
@@ -26,8 +28,7 @@
 		.widget-title {
 			border-bottom: none;
 			font-size: 1rem;
-			font-style: normal;
-			text-transform: uppercase;
+			font-style: italic;;
 		}
 
 	}
@@ -47,11 +48,13 @@
 }
 
 .footer-nav {
+	margin-bottom: 15px;
 
 	ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
+		text-align: center;
 
 		li {
 			display: inline-block;
@@ -65,24 +68,59 @@
 			}
 
 			a {
-				color: $color-white;
+				color: $color-text;
 			}
 
 		}
 
 	}
 
+}
+
+.footer-nav {
+	padding: 50px 0 0;
 }
 
 .site-info-wrapper {
+	padding: 0 0 50px;
 
 	.site-info {
 		overflow: visible;
+		text-align: center;
+	}
 
-		.social-menu {
+	.site-info-text {
+		font-size: .875rem;
+		width: 100%;
+	}
 
-			a {
+}
+
+.footer-nav {
+
+	.social-menu {
+		margin-bottom: 30px;
+
+		li {
+			margin: 0 2px;
+		}
+
+		a {
+			background: none;
+			color: $color-link;
+			height: 46px;
+			width: 46px;
+
+			&:before {
+				font-size: 1.85rem;
+			}
+
+			&:link,
+			&:visited,
+			&:hover,
+			&:active {
 				background: none;
+				color: $color-link;
 			}
 
 		}
@@ -91,11 +129,13 @@
 
 }
 
-.site-info-text {
-	font-size: .875rem;
+.site-info-wrapper a,
+.site-info .social-menu a {
+	color: $color-input-text;
 }
 
-.social-menu {
-	position: relative;
-	top: -20px;
+.site-info-wrapper,
+.footer-nav,
+.site-info-wrapper {
+	background: $color-white;
 }
