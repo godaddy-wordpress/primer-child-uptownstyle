@@ -45,6 +45,7 @@ Variables
         color: #ffffff;
         display: inline-block;
         font-size: 3.75rem;
+        font-style: normal;
         font-variant: small-caps;
         font-weight: bold;
         line-height: 1;
@@ -90,7 +91,7 @@ Variables
     .main-navigation ul li {
       margin: 0 12px; }
       .main-navigation ul li a {
-        color: #212121;
+        color: #000000;
         font-size: .875rem;
         font-weight: bold;
         padding: 0;
@@ -103,7 +104,7 @@ Variables
 
 .main-navigation .sub-menu .menu-item-has-children > .menu-item a::after {
   border-bottom: 7px solid #ffffff;
-  border-left: 7px solid #212121;
+  border-left: 7px solid #000000;
   border-top: 9px solid #ffffff; }
 
 .main-navigation .current_page_item > a,
@@ -114,7 +115,7 @@ Variables
 
 .main-navigation li > a:hover {
   background-color: transparent;
-  color: #212121; }
+  color: #000000; }
 
 .side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title {
   color: #000; }
@@ -140,12 +141,12 @@ Variables
     font-style: italic; }
 
 .site-info-wrapper {
-  background: #fff;
-  color: #606365;
+  background: #ffffff;
+  color: #000000;
   margin: 0 auto;
   padding: 50px 0; }
   .site-info-wrapper a {
-    color: #606365; }
+    color: #000000; }
 
 .footer-nav {
   margin-bottom: 15px; }
@@ -164,7 +165,7 @@ Variables
         .footer-nav ul li {
           text-align: left; } }
       .footer-nav ul li a {
-        color: #212121; }
+        color: #000000; }
 
 .footer-nav {
   padding: 50px 0 0; }
@@ -195,7 +196,7 @@ Variables
 
 .site-info-wrapper a,
 .site-info .social-menu a {
-  color: #898989; }
+  color: #000000; }
 
 .site-info-wrapper,
 .footer-nav,
@@ -203,7 +204,7 @@ Variables
   background: #ffffff; }
 
 body {
-  color: #212121;
+  color: #000000;
   line-height: 1.3em; }
 
 h1 {
@@ -217,21 +218,18 @@ h2 {
   font-style: italic; }
 
 h3 {
-  font-size: 2.25rem;
-  font-style: italic; }
+  font-size: 2.25rem; }
 
 h4 {
-  color: #d24343;
+  color: #54ccbe;
   font-size: 1.5rem;
   font-style: italic; }
 
 h5 {
-  font-size: 1.625rem;
-  font-style: italic; }
+  font-size: 1.625rem; }
 
 h6 {
-  font-size: 1.625rem;
-  font-style: italic; }
+  font-size: 1.625rem; }
 
 p {
   font-size: 1rem;
