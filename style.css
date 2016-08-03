@@ -55,6 +55,7 @@ Variables
       .hero .hero-wrapper .widget a {
         background-color: transparent;
         border: 2px solid #ffffff;
+        color: #ffffff;
         font-size: 1.125rem;
         font-variant: small-caps;
         font-weight: bold;
