@@ -24,6 +24,10 @@ Variables
 
 .custom-logo {
   margin: 30px 0; }
+  @media only screen and (max-width: 64.062em) {
+    .custom-logo {
+      margin: 30px 0 15px;
+      padding: 0 25px; } }
 
 .site-description {
   margin-bottom: 20px; }
@@ -44,11 +48,17 @@ Variables
   left: 0; }
   .hero .hero-wrapper {
     padding: 60px 0; }
+    @media only screen and (max-width: 64.062em) {
+      .hero .hero-wrapper {
+        padding: 30px; } }
     .hero .hero-wrapper .widget {
       border: 3px solid #ffffff;
       margin: 0;
       padding: 80px;
       text-align: center; }
+      @media only screen and (max-width: 64.062em) {
+        .hero .hero-wrapper .widget {
+          padding: 30px; } }
       .hero .hero-wrapper .widget h1 {
         color: #ffffff;
         display: inline-block;
@@ -58,6 +68,10 @@ Variables
         font-weight: bold;
         line-height: 1;
         text-align: left; }
+        @media only screen and (max-width: 64.062em) {
+          .hero .hero-wrapper .widget h1 {
+            font-size: 2.5rem;
+            text-align: center; } }
       .hero .hero-wrapper .widget p {
         font-size: 1.25rem; }
       .hero .hero-wrapper .widget a {
@@ -137,16 +151,38 @@ Variables
 .main-navigation ul li.focus > ul {
   left: 0; }
 
+@media only screen and (max-width: 64.062em) {
+  .main-navigation-container {
+    margin: 0 0 10px 0;
+    padding: 0; }
+  .main-navigation {
+    display: inline-block; }
+    .main-navigation ul li {
+      display: inline-block;
+      margin: 5px 12px; } }
+
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
     width: 33%; } }
 
+@media only screen and (max-width: 64.062em) {
+  .footer-widget-area {
+    padding: 15px; } }
+
 .footer-widget-area .footer-widget {
   border: 2px solid rgba(255, 255, 255, 0.17);
   min-height: 250px; }
+  @media only screen and (max-width: 64.062em) {
+    .footer-widget-area .footer-widget {
+      margin: 0;
+      padding: 15px;
+      text-align: center; } }
   .footer-widget-area .footer-widget .widget {
     background-color: transparent;
     font-size: .875rem; }
+    @media only screen and (max-width: 64.062em) {
+      .footer-widget-area .footer-widget .widget {
+        padding: 0; } }
     .footer-widget-area .footer-widget .widget ul,
     .footer-widget-area .footer-widget .widget li,
     .footer-widget-area .footer-widget .widget a,
@@ -287,3 +323,38 @@ a.button,
   margin: 0;
   padding: 0 0 15px;
   text-align: center; }
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  border: 2px solid #3f3244;
+  border-radius: 0; }
+
+input[type="submit"] {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: .75rem 1.5rem; }
+
+label {
+  font-weight: 100;
+  letter-spacing: .12em;
+  text-transform: uppercase; }
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder {
+  color: #000000; }

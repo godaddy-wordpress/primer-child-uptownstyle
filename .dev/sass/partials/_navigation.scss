@@ -77,3 +77,26 @@
 .main-navigation ul li.focus > ul {
 	left: 0;
 }
+
+@media only screen and (max-width: 64.062em) {
+
+	.main-navigation-container {
+		margin: 0 0 10px 0;
+		padding: 0;
+	}
+
+	.main-navigation {
+		display: inline-block;
+
+		ul {
+
+			li {
+				display: inline-block;
+				margin: 5px 12px;
+			}
+
+		}
+
+	}
+
+}

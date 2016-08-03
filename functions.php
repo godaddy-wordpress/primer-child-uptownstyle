@@ -25,19 +25,8 @@ add_action( 'after_setup_theme', 'uptown_theme_register_nav_menu' );
  */
 function uptown_navigation() {
 	wp_dequeue_script( 'primer-navigation' );
-	wp_enqueue_script( 'uptown-navigation', get_stylesheet_directory_uri() . '/assets/js/navigation.js', array( 'jquery' ), '20120206', true );
 }
 add_action( 'wp_print_scripts', 'uptown_navigation', 100 );
-
-/**
- * Add mobile menu to header
- *
- * @link https://codex.wordpress.org/Function_Reference/get_template_part
- */
-function uptown_add_mobile_menu() {
-	get_template_part( 'templates/parts/mobile-menu' );
-}
-add_action( 'primer_header', 'uptown_add_mobile_menu', 0 );
 
 /**
  *
@@ -344,7 +333,7 @@ function update_font_types() {
 			'label'   => __( 'Primary Font', 'primer' ),
 			'default' => 'Lato',
 			'css'     => array(
-				'body, p' => array(
+				'body, p, label' => array(
 					'font-family' => '"%s", sans-serif',
 				),
 			),
@@ -354,7 +343,7 @@ function update_font_types() {
 			'label'   => esc_html__( 'Header Font', 'primer' ),
 			'default' => 'Playfair Display',
 			'css'     => array(
-				'h1, h2, h3, h4, h5, h6, label, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], .entry-title, .hero .widget h1' => array(
+				'h1, h2, h3, h4, h5, h6, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], .entry-title, .hero .widget h1' => array(
 					'font-family' => '"%s", sans-serif',
 				),
 			),

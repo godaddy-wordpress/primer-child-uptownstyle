@@ -8,13 +8,27 @@
 
 .footer-widget-area {
 
+	@media only screen and (max-width: 64.062em) {
+		padding: 15px;
+	}
+
 	.footer-widget {
 		border: 2px solid transparentize($color-white, 0.83);
 		min-height: 250px;
 
+		@media only screen and (max-width: 64.062em) {
+			margin: 0;
+			padding: 15px;
+			text-align: center;
+		}
+
 		.widget {
 			background-color: transparent;
 			font-size: .875rem;
+
+			@media only screen and (max-width: 64.062em) {
+				padding: 0;
+			}
 
 			ul,
 			li,
