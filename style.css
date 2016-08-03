@@ -69,6 +69,7 @@ Variables
     margin-right: auto; } }
 
 .main-navigation-container {
+  background: none;
   padding: 12px 0 6px; }
 
 .site-header .site-header-wrapper .main-navigation {
