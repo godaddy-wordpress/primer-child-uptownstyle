@@ -19,6 +19,7 @@ This theme, like WordPress, is licensed under the GPL.
 Variables
 --------------------------------------------------------------*/
 .site-header {
+  background-color: #ffffff;
   text-align: center; }
 
 .hero {
