@@ -94,10 +94,11 @@ Variables
         .main-navigation ul li ul li {
           margin: 0;
           padding: 12px; }
-          .main-navigation ul li ul li a:after {
-            border-bottom: 7px solid #ffffff;
-            border-right: 7px solid #202223;
-            border-top: 9px solid #ffffff; }
+
+.main-navigation .sub-menu .menu-item-has-children > a::after {
+  border-bottom: 7px solid #ffffff;
+  border-right: 7px solid #202223;
+  border-top: 9px solid #ffffff; }
 
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
