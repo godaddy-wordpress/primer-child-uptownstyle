@@ -133,6 +133,10 @@ Variables
 .main-navigation a:visited:hover {
   color: #000000; }
 
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+  left: 0; }
+
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area .footer-widget {
     width: 33%; } }

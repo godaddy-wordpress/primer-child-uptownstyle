@@ -72,3 +72,8 @@
 .main-navigation a:visited:hover {
 	color: $color-text;
 }
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: 0;
+}
