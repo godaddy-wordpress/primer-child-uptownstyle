@@ -1,14 +1,29 @@
 <?php
+
+/**
+ * Move titles above menu templates.
+ *
+ * @since 1.0.0
+ */
+function uptown_remove_titles(){
+
+	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
+	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+
+}
+add_action( 'init', 'uptown_remove_titles' );
+
 /**
  *
  * Add child and parent theme files.
  *
  */
-function activation_theme_enqueue_styles() {
+function uptown_theme_enqueue_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
 }
-add_action( 'wp_enqueue_scripts', 'activation_theme_enqueue_styles' );
+add_action( 'wp_enqueue_scripts', 'uptown_theme_enqueue_styles' );
 
 /**
  *
