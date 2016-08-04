@@ -41,7 +41,6 @@ Variables
   color: #000000; }
 
 .hero {
-  background: url(".dev/img/header.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
   top: 0;
