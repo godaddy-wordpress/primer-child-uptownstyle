@@ -44,7 +44,8 @@ Variables
   background-size: cover;
   position: relative;
   top: 0;
-  left: 0; }
+  left: 0;
+  background-color: #3f3244; }
   .hero .hero-wrapper {
     padding: 60px; }
     @media only screen and (max-width: 64.062em) {
