@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 /**
  * Move titles above menu templates.
@@ -80,21 +80,33 @@ function uptown_move_navigation() {
 add_action( 'primer_header', 'uptown_move_navigation', 19 );
 
 /**
+ * Register sidebar areas.
  *
- * Register Hero Widget.
- *
+ * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
+ * @since 1.0.0
  */
-register_sidebar(
-	array(
-		'name'          => esc_html__( 'Hero', 'uptown' ),
-		'id'            => 'hero',
-		'description'   => esc_html__( 'The Hero widget area.', 'uptown' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h6 class="widget-title">',
-		'after_title'   => '</h6>',
-	)
-);
+function uptown_register_sidebars() {
+
+	/**
+	 *
+	 * Register Hero Widget.
+	 *
+	 */
+	register_sidebar(
+		array(
+			'name'          => esc_html__( 'Hero', 'velux' ),
+			'id'            => 'hero',
+			'description'   => esc_html__( 'The Hero widget area.', 'velux' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</aside>',
+			'before_title'  => '<h6 class="widget-title">',
+			'after_title'   => '</h6>',
+		)
+	);
+
+}
+add_action( 'widgets_init', 'uptown_register_sidebars' );
+
 
 /**
  * Add image size for hero image
@@ -346,9 +358,9 @@ function update_font_types() {
 }
 add_action( 'primer_font_types', 'update_font_types', 5 );
 
-function activation_add_default_header_image( $array ) {
-	$array['default-image'] = get_stylesheet_directory_uri() . '/.dev/img/header.jpg';
+function uptown_add_default_header_image( $array ) {
+	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.jpg';
 
 	return $array;
 }
-add_filter( 'primer_custom_header_args', 'activation_add_default_header_image', 20 );
+add_filter( 'primer_custom_header_args', 'uptown_add_default_header_image', 20 );
