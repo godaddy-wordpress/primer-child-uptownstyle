@@ -88,7 +88,18 @@ Variables
   padding: 0; }
 
 .site-title {
-  padding: 30px 0 0; }
+  padding: 40px 0 0; }
+  .wp-custom-logo .site-title {
+    padding-top: 0;
+    margin-top: -25px; }
+  body.custom-header-image .site-title {
+    text-shadow: none; }
+
+.site-description {
+  padding-bottom: 40px;
+  opacity: .5; }
+  body.custom-header-image .site-description {
+    text-shadow: none; }
 
 @media only screen and (min-width: 64.063em) {
   .footer-widget-area {
@@ -260,7 +271,6 @@ body {
 
 h1 {
   font-size: 3.125rem;
-  font-style: italic;
   font-weight: 100; }
 
 h2 {
