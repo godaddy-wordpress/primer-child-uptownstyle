@@ -185,40 +185,11 @@ function uptown_colors() {
 			),
 		),
 		array(
-			'name'    => 'header_textcolor',
-			'default' => '#000000',
-			'css'     => array(
-				'.side-masthead, .site-title a, .site-description, .site-title a:hover, .site-title a:visited, .site-title a:focus, .hero-widget, header .main-navigation-container .menu li a, .main-navigation-container .menu li.current-menu-item > a, .main-navigation-container .menu li.current-menu-item > a:hover, .side-masthead .site-title a, .side-masthead .site-title a:hover, .hero-widget h2.widget-title' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-		array(
 			'name'    => 'background_color',
 			'default' => '#ffffff',
 			'css'     => array(
 				'body' => array(
 					'background-color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'main_text_color',
-			'label'   => __( 'Main Text Color', 'primer' ),
-			'default' => '#212121',
-			'css'     => array(
-				'.site-content, .site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6, .site-content p, .site-content blockquote, legend' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'secondary_text_color',
-			'label'   => __( 'Secondary Text Color', 'primer' ),
-			'default' => '#999999',
-			'css'     => array(
-				'.side-masthead .social-menu a, .entry-meta li, .side-masthead .social-menu a:hover' => array(
-					'color' => '%1$s',
 				),
 			),
 		),
@@ -229,16 +200,6 @@ function uptown_colors() {
 			'css'     => array(
 				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
 					'background-color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'w_text_color',
-			'label'   => __( 'Widget Text Color', 'primer' ),
-			'default' => '#ffffff',
-			'css'     => array(
-				'.footer-widget-area, .footer-widget .widget-title, .site-footer, .footer-widget-area .footer-widget .widget, .footer-widget-area .footer-widget .widget-title' => array(
-					'color' => '%1$s',
 				),
 			),
 		),
@@ -258,26 +219,6 @@ function uptown_colors() {
 			'default' => '#b5345f',
 			'css'     => array(
 				'.site-info-wrapper a, .site-info .social-menu a, .social-menu a' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'footer_menu_textcolor',
-			'label'   => __( 'Footer Menu Text Color', 'primer' ),
-			'default' => '#212121',
-			'css'     => array(
-				'.footer-nav ul li a' => array(
-					'color' => '%1$s',
-				),
-			),
-		),
-		array(
-			'name'    => 'footer_textcolor',
-			'label'   => __( 'Footer Text Color', 'primer' ),
-			'default' => '#898989',
-			'css'     => array(
-				'.site-info-wrapper a, .site-info .social-menu a' => array(
 					'color' => '%1$s',
 				),
 			),
@@ -308,17 +249,11 @@ function uptown_color_schemes() {
 		'bronze' => array(
 			'label'  => esc_html__( 'Bronze', 'uptown' ),
 			'colors' => array(
-				'header_textcolor'         => '#000000',
 				'background_color'         => '#ffffff',
 				'link_color'               => '#c19072',
-				'main_text_color'          => '#000000',
-				'secondary_text_color'     => '#000000',
 				'button_color'			   => '#aeaeae',
-				'w_text_color'			   => '#000000',
 				'w_background_color'	   => '#ffffff',
 				'footer_socialcolor'       => '#c19072',
-				'footer_menu_textcolor'    => '#000000',
-				'footer_textcolor'		   => '#000000',
 				'footer_backgroundcolor'   => '#ffffff',
 			),
 		),
