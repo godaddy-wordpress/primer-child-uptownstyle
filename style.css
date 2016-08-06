@@ -45,9 +45,12 @@ Variables
   position: relative;
   top: 0;
   left: 0;
-  background-color: #3f3244; }
+  background-color: #3f3244;
+  padding: 60px; }
   .hero .hero-wrapper {
-    padding: 60px; }
+    border: 3px solid #ffffff;
+    padding: 60px;
+    text-align: center; }
     @media only screen and (max-width: 64.062em) {
       .hero .hero-wrapper {
         padding: 30px; } }
@@ -76,10 +79,7 @@ Variables
       letter-spacing: .2em;
       padding: 1rem 2rem; }
     .hero .hero-wrapper .widget {
-      border: 3px solid #ffffff;
-      margin: 0;
-      padding: 80px;
-      text-align: center; }
+      margin: 0; }
       @media only screen and (max-width: 64.062em) {
         .hero .hero-wrapper .widget {
           padding: 30px; } }

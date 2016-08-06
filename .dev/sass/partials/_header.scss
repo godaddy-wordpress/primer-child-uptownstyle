@@ -34,9 +34,12 @@
 	top: 0;
 	left: 0;
 	background-color: $color-border;
+	padding: 60px;
 
 	.hero-wrapper {
+		border: 3px solid $color-white;
 		padding: 60px;
+		text-align: center;
 
 		@media only screen and (max-width: 64.062em) {
 			padding: 30px;
@@ -75,10 +78,7 @@
 		}
 
 		.widget {
-			border: 3px solid $color-white;
 			margin: 0;
-			padding: 80px;
-			text-align: center;
 
 			@media only screen and (max-width: 64.062em) {
 				padding: 30px;
