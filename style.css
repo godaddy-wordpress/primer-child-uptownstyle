@@ -367,3 +367,8 @@ label {
 ::-moz-placeholder,
 :-ms-input-placeholder {
   color: #000000; }
+
+#secondary .widget {
+  color: #000000; 
+}
+}
