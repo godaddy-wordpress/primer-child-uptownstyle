@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: basis-pro 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-04 14:38-0500\n"
+"POT-Creation-Date: 2016-08-05 18:19-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,67 +18,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:34
+#: functions.php:40
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:89
+#: functions.php:103
 msgid "Hero"
 msgstr ""
 
-#: functions.php:91
+#: functions.php:105
 msgid "The Hero widget area."
 msgstr ""
 
-#: functions.php:167
+#: functions.php:185
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:195
-msgid "Main Text Color"
-msgstr ""
-
-#: functions.php:205
-msgid "Secondary Text Color"
-msgstr ""
-
-#: functions.php:215
+#: functions.php:204
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:225
-msgid "Widget Text Color"
-msgstr ""
-
-#: functions.php:235
+#: functions.php:214
 msgid "Widget Background Color"
 msgstr ""
 
-#: functions.php:245
+#: functions.php:224
 msgid "Footer Social Icon Color"
 msgstr ""
 
-#: functions.php:255
-msgid "Footer Menu Text Color"
-msgstr ""
-
-#: functions.php:265
-msgid "Footer Text Color"
-msgstr ""
-
-#: functions.php:275
+#: functions.php:234
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:297
+#: functions.php:256
 msgid "Bronze"
 msgstr ""
 
-#: functions.php:327
+#: functions.php:280
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:337
+#: functions.php:290
 msgid "Header Font"
 msgstr ""
 
@@ -108,15 +88,6 @@ msgstr[1] ""
 #. / TRANSLATORS: This should be translated as a shorthand for YEAR-MONTH-DAY using 4, 2 and 2 digits.
 #: node_modules/grunt-pot/test/fixtures/some-other-file.php:16
 msgid "yyyy-mm-dd"
-msgstr ""
-
-#. //developer.wordpress.org/themes/basics/template-hierarchy/#single-post
-#. *
-#. * @package Primer
-#. * @since 1.0.0
-#.
-#: templates/parts/hero.php:12 templates/parts/hero.php:30
-msgid "Blog"
 msgstr ""
 
 #: templates/parts/loop/post-meta.php:13

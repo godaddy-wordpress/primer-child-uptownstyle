@@ -1,3 +1,10 @@
+<?php
+/**
+ * Template part for displaying the footer nav menu.
+ *
+ * @package Uptown Style
+ */
+?>
 <div class="footer-nav">
 	<div class="row">
 		<?php get_template_part( 'templates/parts/social-navigation' ) ?>

@@ -42,6 +42,38 @@
 			padding: 30px;
 		}
 
+		h1 {
+			color: $color-white;
+			display: inline-block;
+			font-size: 3.75rem;
+			font-style: normal;
+			font-variant: small-caps;
+			font-weight: bold;
+			line-height: 1;
+			text-align: left;
+
+			@media only screen and (max-width: 64.062em) {
+				font-size: 2.5rem;
+				text-align: center;
+			}
+
+		}
+
+		p {
+			font-size: 1.25rem;
+		}
+
+		a {
+			background-color: transparent;
+			border: 2px solid $color-white;
+			color: $color-white;
+			font-size: 1.125rem;
+			font-variant: small-caps;
+			font-weight: bold;
+			letter-spacing: .2em;
+			padding: 1rem 2rem;
+		}
+
 		.widget {
 			border: 3px solid $color-white;
 			margin: 0;
@@ -50,38 +82,6 @@
 
 			@media only screen and (max-width: 64.062em) {
 				padding: 30px;
-			}
-
-			h1 {
-				color: $color-white;
-				display: inline-block;
-				font-size: 3.75rem;
-				font-style: normal;
-				font-variant: small-caps;
-				font-weight: bold;
-				line-height: 1;
-				text-align: left;
-
-				@media only screen and (max-width: 64.062em) {
-					font-size: 2.5rem;
-					text-align: center;
-				}
-
-			}
-
-			p {
-				font-size: 1.25rem;
-			}
-
-			a {
-				background-color: transparent;
-				border: 2px solid $color-white;
-				color: $color-white;
-				font-size: 1.125rem;
-				font-variant: small-caps;
-				font-weight: bold;
-				letter-spacing: .2em;
-				padding: 1rem 2rem;
 			}
 
 		}

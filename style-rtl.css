@@ -1,10 +1,10 @@
 /*
-Theme Name: Uptown
+Theme Name: Uptown Style
 Theme URI: http://liftux.com
-Author: Lift
+Author: GoDaddy
 Author URI: http://liftux.com
-Description: This is a child theme for Primer.
-Version: 0.0.9
+Description: A child theme for Primer with a focus on elegance and beauty.
+Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: uptown
@@ -51,6 +51,30 @@ Variables
     @media only screen and (max-width: 64.062em) {
       .hero .hero-wrapper {
         padding: 30px; } }
+    .hero .hero-wrapper h1 {
+      color: #ffffff;
+      display: inline-block;
+      font-size: 3.75rem;
+      font-style: normal;
+      font-variant: small-caps;
+      font-weight: bold;
+      line-height: 1;
+      text-align: right; }
+      @media only screen and (max-width: 64.062em) {
+        .hero .hero-wrapper h1 {
+          font-size: 2.5rem;
+          text-align: center; } }
+    .hero .hero-wrapper p {
+      font-size: 1.25rem; }
+    .hero .hero-wrapper a {
+      background-color: transparent;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+      font-size: 1.125rem;
+      font-variant: small-caps;
+      font-weight: bold;
+      letter-spacing: .2em;
+      padding: 1rem 2rem; }
     .hero .hero-wrapper .widget {
       border: 3px solid #ffffff;
       margin: 0;
@@ -59,30 +83,6 @@ Variables
       @media only screen and (max-width: 64.062em) {
         .hero .hero-wrapper .widget {
           padding: 30px; } }
-      .hero .hero-wrapper .widget h1 {
-        color: #ffffff;
-        display: inline-block;
-        font-size: 3.75rem;
-        font-style: normal;
-        font-variant: small-caps;
-        font-weight: bold;
-        line-height: 1;
-        text-align: right; }
-        @media only screen and (max-width: 64.062em) {
-          .hero .hero-wrapper .widget h1 {
-            font-size: 2.5rem;
-            text-align: center; } }
-      .hero .hero-wrapper .widget p {
-        font-size: 1.25rem; }
-      .hero .hero-wrapper .widget a {
-        background-color: transparent;
-        border: 2px solid #ffffff;
-        color: #ffffff;
-        font-size: 1.125rem;
-        font-variant: small-caps;
-        font-weight: bold;
-        letter-spacing: .2em;
-        padding: 1rem 2rem; }
 
 .site-title-wrapper {
   float: none;

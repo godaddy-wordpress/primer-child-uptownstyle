@@ -2,7 +2,7 @@
 /**
  * Displays the site title.
  *
- * @package Primer
+ * @package Uptown Style
  */
 $site_title = get_bloginfo( 'name', 'display' );
 $site_description = get_bloginfo( 'description', 'display' );

@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the post meta inside The Loop.
  *
- * @package Primer
+ * @package Uptown Style
  */
 ?>
 

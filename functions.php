@@ -11,6 +11,12 @@ function uptown_remove_titles(){
 	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
 	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
 
+	if( ! is_front_page() ):
+		add_action( 'uptown_hero', 'primer_add_page_builder_template_title' );
+		add_action( 'uptown_hero', 'primer_add_blog_title' );
+		add_action( 'uptown_hero', 'primer_add_archive_title' );
+	endif;
+
 }
 add_action( 'init', 'uptown_remove_titles' );
 
