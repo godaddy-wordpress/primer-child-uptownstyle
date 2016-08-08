@@ -2,7 +2,7 @@
 /**
  * Template part for displaying the page title inside The Loop.
  *
- * @package Primer
+ * @package Uptown Style
  */
 ?>
 
@@ -12,6 +12,7 @@
 	/**
 	 * Fires before the page title element.
 	 *
+	 * @package Uptown Style
 	 * @since 1.0.0
 	 */
 	do_action( 'primer_before_page_title' );
@@ -33,6 +34,7 @@
 	/**
 	 * Fires after the page title element.
 	 *
+	 * @package Uptown Style
 	 * @since 1.0.0
 	 */
 	do_action( 'primer_after_page_title' );

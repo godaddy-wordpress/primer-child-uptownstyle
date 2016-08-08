@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
  *
- * @package Primer
+ * @package Uptown Style
  */
 ?><!DOCTYPE html>
 
@@ -32,7 +32,7 @@
 
 	<div id="page" class="hfeed site">
 
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'primer' ) ?></a>
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'uptown_style' ) ?></a>
 
 		<?php do_action( 'primer_before_header' ) ?>
 

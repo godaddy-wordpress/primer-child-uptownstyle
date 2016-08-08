@@ -2,7 +2,7 @@
 /**
  * Displays the primary navigation.
  *
- * @package Primer
+ * @package Uptown Style
  */
 ?>
 
@@ -10,7 +10,7 @@
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 
-		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ) ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'uptown-style' ) ) ?>
 
 	</nav><!-- #site-navigation -->
 

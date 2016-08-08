@@ -1,11 +1,10 @@
-	<?php
-
+<?php
 /**
  * Move titles above menu templates.
  *
- * @since 1.0.0
+ * @package Uptown Style
  */
-function uptown_remove_titles(){
+function uptown_remove_titles() {
 
 	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
 	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
@@ -21,9 +20,9 @@ function uptown_remove_titles(){
 add_action( 'init', 'uptown_remove_titles' );
 
 /**
- *
  * Add child and parent theme files.
  *
+ * @package Uptown Style
  */
 function uptown_theme_enqueue_styles() {
 	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
@@ -35,14 +34,17 @@ add_action( 'wp_enqueue_scripts', 'uptown_theme_enqueue_styles' );
  *
  * Register Footer Menu.
  *
+ * @package Uptown Style
  */
 function uptown_theme_register_nav_menu() {
-	 register_nav_menu( 'footer', __( 'Footer Menu', 'uptown' ) );
+	 register_nav_menu( 'footer', __( 'Footer Menu', 'uptown_style' ) );
 }
 add_action( 'after_setup_theme', 'uptown_theme_register_nav_menu' );
 
 /**
  * Remove primer navigation and add uptown navigation
+ *
+ * @package Uptown Style
  */
 function uptown_navigation() {
 	wp_dequeue_script( 'primer-navigation' );
@@ -53,6 +55,7 @@ add_action( 'wp_print_scripts', 'uptown_navigation', 100 );
  *
  * Adding content to footer via action.
  *
+ * @package Uptown Style
  */
 function uptown_theme_footer_content() {
 	return;
@@ -64,6 +67,7 @@ add_action( 'primer_footer', 'uptown_theme_footer_content' );
  *
  * @action primer_after_footer
  *
+ * @package Uptown Style
  * @since 1.0.0
  */
 function uptown_add_nav_footer() {
@@ -76,6 +80,7 @@ add_action( 'primer_after_footer', 'uptown_add_nav_footer', 10 );
 /**
  * Move navigation from after_header to header
  *
+ * @package Uptown Style
  * @link https://codex.wordpress.org/Function_Reference/remove_action
  * @link https://codex.wordpress.org/Function_Reference/add_action
  */
@@ -88,21 +93,23 @@ add_action( 'primer_header', 'uptown_move_navigation', 19 );
 /**
  * Register sidebar areas.
  *
+ * @package Uptown Style
  * @link  http://codex.wordpress.org/Function_Reference/register_sidebar
  * @since 1.0.0
  */
-function uptown_register_sidebars() {
+function uptown_style_register_sidebars() {
 
 	/**
 	 *
 	 * Register Hero Widget.
 	 *
+	 * @package Uptown Style
 	 */
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Hero', 'velux' ),
+			'name'          => esc_html__( 'Hero', 'uptown_style' ),
 			'id'            => 'hero',
-			'description'   => esc_html__( 'The Hero widget area.', 'velux' ),
+			'description'   => esc_html__( 'The Hero widget area.', 'uptown_style' ),
 			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</aside>',
 			'before_title'  => '<h6 class="widget-title">',
@@ -111,55 +118,59 @@ function uptown_register_sidebars() {
 	);
 
 }
-add_action( 'widgets_init', 'uptown_register_sidebars' );
+add_action( 'widgets_init', 'uptown_style_register_sidebars' );
 
 
 /**
  * Add image size for hero image
  *
+ * @package Uptown Style
  * @link https://codex.wordpress.org/Function_Reference/add_image_size
  */
-function uptown_add_image_size() {
+function uptown_style_add_image_size() {
 
 	add_image_size( 'hero', 2400, 1320, array( 'center', 'center' ) );
 
 }
-add_action( 'after_setup_theme', 'uptown_add_image_size' );
+add_action( 'after_setup_theme', 'uptown_style_add_image_size' );
 
 /**
  * Update custom header arguments
  *
+ * @package Uptown Style
  * @param $args
  * @return mixed
  */
-function uptown_update_custom_header_args( $args ) {
+function uptown_style_update_custom_header_args( $args ) {
 	$args['width'] = 2400;
 	$args['height'] = 1320;
 
 	return $args;
 }
-add_filter( 'primer_custom_header_args', 'uptown_update_custom_header_args' );
+add_filter( 'primer_custom_header_args', 'uptown_style_update_custom_header_args' );
 
 /**
  * Add hero after header if we are on a post or front page.
  *
+ * @package Uptown Style
  * @action primer_after_header
  * @since 1.0.0
  */
-function uptown_add_hero() {
+function uptown_style_add_hero() {
 
 	remove_action( 'primer_header', 'primer_add_hero', 10 );
 	add_action( 'primer_after_header', 'primer_add_hero', 20 );
 
 }
-add_action( 'after_setup_theme', 'uptown_add_hero' );
+add_action( 'after_setup_theme', 'uptown_style_add_hero' );
 
 /**
  * Get header image with image size
  *
+ * @package Uptown Style
  * @return false|string
  */
-function uptown_get_header_image() {
+function uptown_style_get_header_image() {
 	$image_size = (int) get_theme_mod( 'full_width' ) === 1 ? 'hero-2x' : 'hero';
 	$custom_header = get_custom_header();
 
@@ -176,13 +187,14 @@ function uptown_get_header_image() {
 /**
  * Update colors
  *
+ * @package Uptown Style
  * @action primer_colors
  */
-function uptown_colors() {
+function uptown_style_colors() {
 	return array(
 		array(
 			'name'    => 'link_color',
-			'label'   => __( 'Link Color', 'primer' ),
+			'label'   => __( 'Link Color', 'uptown_style' ),
 			'default' => '#54ccbe',
 			'css'     => array(
 				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget a' => array(
@@ -201,7 +213,7 @@ function uptown_colors() {
 		),
 		array(
 			'name'    => 'button_color',
-			'label'   => __( 'Button Color', 'primer' ),
+			'label'   => __( 'Button Color', 'uptown_style' ),
 			'default' => '#b5345f',
 			'css'     => array(
 				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
@@ -211,7 +223,7 @@ function uptown_colors() {
 		),
 		array(
 			'name'    => 'w_background_color',
-			'label'   => __( 'Widget Background Color', 'primer' ),
+			'label'   => __( 'Widget Background Color', 'uptown_style' ),
 			'default' => '#3f3244',
 			'css'     => array(
 				'.site-footer' => array(
@@ -221,7 +233,7 @@ function uptown_colors() {
 		),
 		array(
 			'name'    => 'footer_socialcolor',
-			'label'   => __( 'Footer Social Icon Color', 'primer' ),
+			'label'   => __( 'Footer Social Icon Color', 'uptown_style' ),
 			'default' => '#b5345f',
 			'css'     => array(
 				'.site-info-wrapper a, .site-info .social-menu a, .social-menu a' => array(
@@ -231,7 +243,7 @@ function uptown_colors() {
 		),
 		array(
 			'name'    => 'footer_backgroundcolor',
-			'label'   => __( 'Footer Background Color', 'primer' ),
+			'label'   => __( 'Footer Background Color', 'uptown_style' ),
 			'default' => '#ffffff',
 			'css'     => array(
 				'.site-info-wrapper, .footer-nav, .site-info-wrapper' => array(
@@ -241,19 +253,20 @@ function uptown_colors() {
 		),
 	);
 }
-add_action( 'primer_colors', 'uptown_colors', 9 );
+add_action( 'primer_colors', 'uptown_style_colors', 9 );
 
 /**
  * Change uptown color schemes
  *
+ * @package Uptown Style
  * @action primer_color_schemes
  * @since 1.0.0
  * @return array
  */
-function uptown_color_schemes() {
+function uptown_style_color_schemes() {
 	return array(
 		'bronze' => array(
-			'label'  => esc_html__( 'Bronze', 'uptown' ),
+			'label'  => esc_html__( 'Bronze', 'uptown_style' ),
 			'colors' => array(
 				'background_color'         => '#ffffff',
 				'link_color'               => '#c19072',
@@ -265,19 +278,20 @@ function uptown_color_schemes() {
 		),
 	);
 }
-add_action( 'primer_color_schemes', 'uptown_color_schemes' );
+add_action( 'primer_color_schemes', 'uptown_style_color_schemes' );
 
 /**
  *
  * Add selectors for font customizing.
  *
+ * @package Uptown Style
  * @since 1.0.0
  */
-function update_font_types() {
+function uptown_style_update_font_types() {
 	return	array(
 		array(
 			'name'    => 'primary_font',
-			'label'   => __( 'Primary Font', 'primer' ),
+			'label'   => __( 'Primary Font', 'uptown_style' ),
 			'default' => 'Lato',
 			'css'     => array(
 				'body, p, label' => array(
@@ -287,7 +301,7 @@ function update_font_types() {
 		),
 		array(
 			'name'    => 'header_font',
-			'label'   => esc_html__( 'Header Font', 'primer' ),
+			'label'   => esc_html__( 'Header Font', 'uptown_style' ),
 			'default' => 'Playfair Display',
 			'css'     => array(
 				'h1, h2, h3, h4, h5, h6, legend, table th, .site-title, .entry-title, .widget-title, .main-navigation li a, button, a.button, input[type="button"], input[type="reset"], input[type="submit"], .entry-title, .hero .widget h1' => array(
@@ -297,11 +311,18 @@ function update_font_types() {
 		),
 	);
 }
-add_action( 'primer_font_types', 'update_font_types', 5 );
+add_action( 'primer_font_types', 'uptown_style_update_font_types', 5 );
 
-function uptown_add_default_header_image( $array ) {
+/**
+ *
+ * Default header image in the hero area.
+ *
+ * @package Uptown Style
+ * @since 1.0.0
+ */
+function uptown_style_add_default_header_image( $array ) {
 	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.jpg';
 
 	return $array;
 }
-add_filter( 'primer_custom_header_args', 'uptown_add_default_header_image', 20 );
+add_filter( 'primer_custom_header_args', 'uptown_style_add_default_header_image', 20 );
