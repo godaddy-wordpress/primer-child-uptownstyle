@@ -45,7 +45,7 @@ add_action( 'wp_enqueue_scripts', 'uptown_enqueue_styles' );
  */
 function uptown_register_nav_menu( $menu ) {
 
-	$menu[ 'footer' ] = __( 'Footer Menu', 'activation' );
+	$menu[ 'footer' ] = __( 'Footer Menu', 'uptown_style' );
 
 	return $menu;
 
