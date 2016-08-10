@@ -1,70 +1,70 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the basis-pro package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Uptown Style
+# Copyright (C) 2016
+# This file is distributed under the same license as the uptown-style package.
+# GoDaddy Operating Company, LLC.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: basis-pro 0.0.1\n"
+"Project-Id-Version: uptown-style 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-05 18:19-0500\n"
+"POT-Creation-Date: 2016-08-10 16:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:40
+#: functions.php:48
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:103
+#: functions.php:124
 msgid "Hero"
 msgstr ""
 
-#: functions.php:105
+#: functions.php:126
 msgid "The Hero widget area."
 msgstr ""
 
-#: functions.php:185
-msgid "Link Color"
-msgstr ""
-
-#: functions.php:204
+#: functions.php:219
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:214
-msgid "Widget Background Color"
-msgstr ""
-
-#: functions.php:224
+#: functions.php:228
 msgid "Footer Social Icon Color"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:237
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:256
-msgid "Bronze"
+#: functions.php:246
+msgid "Link Color"
+msgstr ""
+
+#: functions.php:255
+msgid "Widget Background Color"
 msgstr ""
 
 #: functions.php:280
+msgid "Bronze"
+msgstr ""
+
+#: functions.php:306
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:290
+#: functions.php:315
 msgid "Header Font"
 msgstr ""
 
 #. //developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/#header-php
 #. *
-#. * @package Primer
+#. * @package Uptown Style
 #.
 #: header.php:35
 msgid "Skip to content"

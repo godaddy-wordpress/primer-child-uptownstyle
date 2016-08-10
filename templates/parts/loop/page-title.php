@@ -18,9 +18,7 @@
 	do_action( 'primer_before_page_title' );
 	?>
 
-	<?php if ( is_page_template( 'page-no-header.php' ) ) : ?>
-
-	<?php elseif ( is_singular() ) : ?>
+	<?php if ( is_singular() ) : ?>
 
 		<h1 class="page-title"><?php the_title(); ?></h1>
 
