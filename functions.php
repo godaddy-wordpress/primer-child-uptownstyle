@@ -246,7 +246,7 @@ function uptown_colors() {
 			'label'   => __( 'Link Color', 'uptown_style' ),
 			'default' => '#54ccbe',
 			'css'     => array(
-				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget a' => array(
+				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget a, .main-navigation-container .menu li.current-menu-item > a:hover, .main-navigation-container .menu li.current-menu-item > a' => array(
 					'color' => '%1$s',
 				),
 			),
