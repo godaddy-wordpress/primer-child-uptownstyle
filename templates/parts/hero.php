@@ -5,7 +5,7 @@
  * @package Uptown Style
  */
 
-$header_img = primer_get_header_image();
+$header_img = primer_get_hero_image();
 ?>
 <div class="hero" <?php if ( ! empty( $header_img ) ) : ?> style="background:url('<?php echo $header_img; ?>') no-repeat top center; background-size: cover;"<?php endif; ?>>
 

@@ -1,25 +1,18 @@
 <?php
 /**
- * Move titles above menu templates.
+ * Move elements around the theme
  *
  * @package Uptown Style
  */
-function uptown_remove_titles() {
+function uptown_move_elements() {
 
-	remove_action( 'primer_after_header', 'primer_add_page_builder_template_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_blog_title', 100 );
-	remove_action( 'primer_after_header', 'primer_add_archive_title', 100 );
+	remove_action( 'primer_before_site_navigation',  'primer_add_mobile_menu' );
+	remove_action( 'primer_after_header',            'primer_add_primary_navigation' );
 
-	if ( ! is_front_page() ) {
-
-		add_action( 'uptown_hero', 'primer_add_page_builder_template_title' );
-		add_action( 'uptown_hero', 'primer_add_blog_title' );
-		add_action( 'uptown_hero', 'primer_add_archive_title' );
-
-	}
+	add_action( 'primer_header',            'primer_add_primary_navigation' );
 
 }
-add_action( 'init', 'uptown_remove_titles' );
+add_action( 'template_redirect', 'uptown_move_elements' );
 
 /**
  * Add child and parent theme files.
@@ -53,6 +46,18 @@ function uptown_register_nav_menu( $menu ) {
 add_filter( 'primer_nav_menus', 'uptown_register_nav_menu' );
 
 /**
+ * Add foother navigation
+ *
+ * @since 1.0.0
+ */
+function uptown_add_footer_navigation() {
+
+	get_template_part( 'templates/parts/footer-navigation' );
+
+}
+add_action( 'primer_site_info', 'uptown_add_footer_navigation' );
+
+/**
  * Remove primer navigation and add uptown navigation
  *
  * @package Uptown Style
@@ -63,45 +68,6 @@ function uptown_navigation() {
 
 }
 add_action( 'wp_print_scripts', 'uptown_navigation', 100 );
-
-/**
- *
- * Adding content to footer via action.
- *
- * @package Uptown Style
- */
-add_action( 'primer_footer', '__return_empty_string' );
-
-/**
- * Display the footer nav before the site info.
- *
- * @action primer_after_footer
- *
- * @package Uptown Style
- * @since 1.0.0
- */
-function uptown_add_nav_footer() {
-
-	get_template_part( 'templates/parts/footer-nav' );
-
-}
-add_action( 'primer_after_footer', 'uptown_add_nav_footer', 10 );
-
-/**
- * Move navigation from after_header to header
- *
- * @package Uptown Style
- * @link https://codex.wordpress.org/Function_Reference/remove_action
- * @link https://codex.wordpress.org/Function_Reference/add_action
- */
-function uptown_move_navigation() {
-
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 20 );
-
-	get_template_part( 'templates/parts/primary-navigation' );
-
-}
-add_action( 'primer_header', 'uptown_move_navigation', 19 );
 
 /**
  * Register sidebar areas.
@@ -324,23 +290,3 @@ function uptown_update_font_types() {
 
 }
 add_action( 'primer_font_types', 'uptown_update_font_types', 5 );
-
-/**
- *
- * Default header image in the hero area.
- *
- * @package Uptown Style
- * @since   1.0.0
- *
- * @param $array
- *
- * @return
- */
-function uptown_add_default_header_image( $array ) {
-
-	$array['default-image'] = get_stylesheet_directory_uri() . '/assets/img/header.jpg';
-
-	return $array;
-
-}
-add_filter( 'primer_custom_header_args', 'uptown_add_default_header_image', 20 );

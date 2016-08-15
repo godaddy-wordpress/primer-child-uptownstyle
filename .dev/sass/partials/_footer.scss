@@ -61,8 +61,9 @@
 
 }
 
-.footer-nav {
+.footer-menu {
 	margin-bottom: 15px;
+	padding: 10px 0 0;
 
 	ul {
 		list-style: none;
@@ -91,10 +92,6 @@
 
 }
 
-.footer-nav {
-	padding: 50px 0 0;
-}
-
 .site-info-wrapper {
 	padding: 0 0 50px;
 
@@ -106,14 +103,17 @@
 	.site-info-text {
 		font-size: .875rem;
 		width: 100%;
+		margin: 0;
 	}
 
 }
 
-.footer-nav {
+.site-info-inner {
 
 	.social-menu {
-		margin-bottom: 30px;
+		float: inherit;
+		margin: 20px auto 0 auto;
+		text-align: center;
 
 		li {
 			margin: 0 2px;
@@ -149,7 +149,7 @@
 }
 
 .site-info-wrapper,
-.footer-nav,
+.footer-menu,
 .site-info-wrapper {
 	background: $color-white;
 }
