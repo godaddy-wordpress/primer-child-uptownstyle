@@ -8,8 +8,10 @@ function uptown_move_elements() {
 
 	remove_action( 'primer_before_site_navigation',  'primer_add_mobile_menu' );
 	remove_action( 'primer_after_header',            'primer_add_primary_navigation' );
+	remove_action( 'primer_header',                  'primer_add_hero' );
 
-	add_action( 'primer_header',            'primer_add_primary_navigation' );
+	add_action( 'primer_header',       'primer_add_primary_navigation' );
+	add_action( 'primer_after_header', 'primer_add_hero' );
 
 }
 add_action( 'template_redirect', 'uptown_move_elements' );
@@ -114,17 +116,8 @@ add_filter( 'primer_sidebars', 'uptown_register_sidebars' );
  */
 function uptown_add_image_size( $images_sizes ) {
 
-	$images_sizes[ 'primer-hero' ] = array(
-		'width'  => 1200,
-		'height' => 660,
-		'crop'   => array( 'center', 'center' ),
-	);
-
-	$images_sizes[ 'primer-hero-2x' ] = array(
-		'width'  => 2400,
-		'height' => 1320,
-		'crop'   => array( 'center', 'center' ),
-	);
+	$images_sizes['primer-hero']['width']  = 2400;
+	$images_sizes['primer-hero']['height'] = 1320;
 
 	return $images_sizes;
 
@@ -149,20 +142,26 @@ function uptown_update_custom_header_args( $args ) {
 add_filter( 'primer_custom_header_args', 'uptown_update_custom_header_args' );
 
 /**
- * Add hero after header if we are on a post or front page.
+ * Add hero style.
  *
- * @package Uptown Style
- * @action primer_after_header
  * @since 1.0.0
+ *
+ * @param string $header_styles
+ *
+ * @return string
  */
-function uptown_add_hero() {
+function uptown_hero_style_atts( $header_styles ) {
 
-	remove_action( 'primer_header', 'primer_add_hero', 10 );
+	if ( primer_has_hero_image() ) {
 
-	add_action( 'primer_after_header', 'primer_add_hero', 20 );
+		$header_styles .= sprintf( "background:url('%s') no-repeat top center; background-size: cover;", esc_attr( primer_get_hero_image() ) );
+
+	}
+
+	return $header_styles;
 
 }
-add_action( 'after_setup_theme', 'uptown_add_hero' );
+add_filter( 'primer_hero_style_attr', 'uptown_hero_style_atts' );
 
 /**
  * Update colors

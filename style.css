@@ -48,14 +48,14 @@ Variables
   left: 0;
   background-color: #3f3244;
   padding: 60px; }
-  .hero .hero-wrapper {
+  .hero .hero-inner {
     border: 3px solid #ffffff;
     padding: 60px;
     text-align: center; }
     @media only screen and (max-width: 64.062em) {
-      .hero .hero-wrapper {
+      .hero .hero-inner {
         padding: 30px; } }
-    .hero .hero-wrapper h1 {
+    .hero .hero-inner h1 {
       color: #ffffff;
       display: inline-block;
       font-size: 3.75rem;
@@ -65,12 +65,12 @@ Variables
       line-height: 1;
       text-align: left; }
       @media only screen and (max-width: 64.062em) {
-        .hero .hero-wrapper h1 {
+        .hero .hero-inner h1 {
           font-size: 2.5rem;
           text-align: center; } }
-    .hero .hero-wrapper p {
+    .hero .hero-inner p {
       font-size: 1.25rem; }
-    .hero .hero-wrapper a {
+    .hero .hero-inner a {
       background-color: transparent;
       border: 2px solid #ffffff;
       color: #ffffff;
@@ -79,10 +79,10 @@ Variables
       font-weight: bold;
       letter-spacing: .2em;
       padding: 1rem 2rem; }
-    .hero .hero-wrapper .widget {
+    .hero .hero-inner .widget {
       margin: 0; }
       @media only screen and (max-width: 64.062em) {
-        .hero .hero-wrapper .widget {
+        .hero .hero-inner .widget {
           padding: 30px; } }
 
 .site-title-wrapper {
