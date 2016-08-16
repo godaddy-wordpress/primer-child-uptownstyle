@@ -1566,7 +1566,9 @@ body.page-template-page-builder-no-header .content-area {
   color: white;
   padding: 40px;
   text-align: center;
-  background-color: #ccc; }
+  background-color: #ccc;
+  -webkit-background-size: cover;
+  background-size: cover; }
   .page-title-container .page-header {
     border: 3px solid rgba(255, 255, 255, 0.8);
     padding: 40px; }
@@ -1612,7 +1614,9 @@ body.no-max-width .page-title-container .page-header {
   clear: both;
   padding: 40px;
   text-align: center;
-  background-color: #ccc; }
+  background-color: #ccc;
+  -webkit-background-size: cover;
+  background-size: cover; }
   .hero .hero-inner {
     border: 3px solid rgba(255, 255, 255, 0.8);
     padding: 20px; }
