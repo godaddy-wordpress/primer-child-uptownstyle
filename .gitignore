@@ -2,4 +2,4 @@ node_modules
 /.DS_Store
 /.dev/.DS_Store
 /.dev/img/.DS_Store
-.dev/local-url
+/.dev/local-url

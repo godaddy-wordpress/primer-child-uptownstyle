@@ -1,16 +1,8 @@
 /* global module, require */
 
-module.exports = function(grunt) {
+module.exports = function( grunt ) {
 
 	var pkg = grunt.file.readJSON( 'package.json' );
-
-	var local_url = 'http://wp.dev';
-
-	if ( grunt.file.exists( '.dev/local-url' ) ) {
-
-		local_url = grunt.file.read( '.dev/local-url' ).trim();
-
-	}
 
 	grunt.initConfig({
 
@@ -30,22 +22,7 @@ module.exports = function(grunt) {
 				cascade: false
 			},
 			dist: {
-				src: [ '*.css' ]
-			}
-		},
-
-		browserSync: {
-			dev: {
-				bsFiles: {
-					src: [
-						'*.css',
-						'**/*.php',
-						'*.js'
-					]
-				},
-				options: {
-					proxy: local_url // this is read from the file .dev/local-url
-				}
+				src: [ '*.css', '!ie.css' ]
 			}
 		},
 
@@ -75,29 +52,35 @@ module.exports = function(grunt) {
 		},
 
 		pot: {
-			options:{
-				text_domain: pkg.name, //Your text domain. Produces my-text-domain.pot
-				dest: 'languages/', //directory to place the pot file
-				keywords: [ //WordPress localisation functions
-					'__:1',
-					'_e:1',
-					'_x:1,2c',
-					'esc_html__:1',
-					'esc_html_e:1',
-					'esc_html_x:1,2c',
-					'esc_attr__:1',
-					'esc_attr_e:1',
-					'esc_attr_x:1,2c',
-					'_ex:1,2c',
-					'_n:1,2',
-					'_nx:1,2,4c',
-					'_n_noop:1,2',
-					'_nx_noop:1,2,3c'
-				]
-			},
 			files:{
-				src:  [ '**/*.php' ],
-				expand: true
+				expand: true,
+				src: [ '**/*.php', '!node_modules/**' ]
+			},
+			options:{
+				text_domain: pkg.name,
+				msgmerge: true,
+				dest: 'languages/',
+				encoding: 'UTF-8',
+				keywords: [
+					'__',
+					'_e',
+					'__ngettext:1,2',
+					'_n:1,2',
+					'__ngettext_noop:1,2',
+					'_n_noop:1,2',
+					'_c',
+					'_nc:4c,1,2',
+					'_x:1,2c',
+					'_nx:4c,1,2',
+					'_nx_noop:4c,1,2',
+					'_ex:1,2c',
+					'esc_attr__',
+					'esc_attr_e',
+					'esc_attr_x:1,2c',
+					'esc_html__',
+					'esc_html_e',
+					'esc_html_x:1,2c'
+				]
 			}
 		},
 
@@ -111,7 +94,7 @@ module.exports = function(grunt) {
 						to: pkg.title
 					},
 					{
-						from: 'YEAR THE PACKAGE\'S COPYRIGHT HOLDER',
+						from: "YEAR THE PACKAGE'S COPYRIGHT HOLDER",
 						to: new Date().getFullYear()
 					},
 					{
@@ -127,31 +110,36 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+			options: {
+				precision: 5,
+				sourceMap: false
+			},
 			dist: {
-				files: {
-					'style.css'        : '.dev/sass/style.scss',
-					'editor-style.css' : '.dev/sass/editor-style.scss'
-				}
+				options: {
+					require: 'susy'
+				},
+				files: [
+					{
+						'style.css': '.dev/sass/style.scss',
+						'editor-style.css': '.dev/sass/editor-style.scss',
+						'ie.css': '.dev/sass/ie.scss'
+					}
+				]
 			}
 		},
 
 		watch: {
 			css: {
-				files: '.dev/**/*.scss',
+				files: '.dev/sass/**/*.scss',
 				tasks: [ 'sass','autoprefixer','cssjanus' ]
-			},
-			pot: {
-				files: [ '**/*.php' ],
-				tasks: [ 'pot' ]
 			}
 		}
+
 	});
 
-
-	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
+	require( 'matchdep' ).filterDev( 'grunt-*' ).forEach( grunt.loadNpmTasks );
 
 	grunt.registerTask( 'default', [ 'sass', 'autoprefixer', 'cssjanus' ] );
-	grunt.registerTask( 'lint', [ 'jshint' ] );
 	grunt.registerTask( 'update-pot', [ 'pot', 'replace:pot' ] );
 
 };
