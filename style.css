@@ -1875,27 +1875,39 @@ body.no-max-width .site-info-wrapper .site-info {
   .social-menu a[href*="linkedin.com"]:before:hover {
     color: #0e76a8; }
 
-.footer-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: center; }
-  @media only screen and (min-width: 40.063em) {
-    .footer-nav ul {
-      text-align: left; } }
-  .footer-nav ul li {
-    display: inline-block;
-    font-family: "Playfair Display", "Helvetica Neue", sans-serif;
-    font-size: .875rem;
-    font-weight: 600;
-    margin: 0 10px;
+.footer-menu {
+  text-align: center;
+  padding: 20px 0 40px; }
+  .footer-menu ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
-    text-transform: uppercase; }
-    @media only screen and (min-width: 568px) {
-      .footer-nav ul li {
+    display: inline; }
+    @media only screen and (min-width: 40.063em) {
+      .footer-menu ul {
         text-align: left; } }
-    .footer-nav ul li a {
-      color: #222; }
+    .footer-menu ul li {
+      display: inline-block;
+      font-family: "Playfair Display", "Helvetica Neue", sans-serif;
+      font-size: .875rem;
+      font-weight: 600;
+      margin: 0 10px;
+      text-align: center;
+      text-transform: uppercase; }
+      .footer-menu ul li:first-of-type {
+        margin-left: 0; }
+      @media only screen and (min-width: 40.063em) {
+        .footer-menu ul li {
+          text-align: left; } }
+      .footer-menu ul li a {
+        color: #222;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 5px; }
+        .footer-menu ul li a:hover {
+          border-color: #222; }
+          .footer-menu ul li a:hover:after {
+            padding-left: 10px; }
 
 /*--------------------------------------------------------------
 # Widgets
