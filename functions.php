@@ -54,7 +54,7 @@ function uptown_font_types( $font_types ) {
 		'header_font' => array(
 			'default' => 'Playfair Display',
 			'css'     => array(
-				'nav.main-navigation li a' => array(
+				'nav.main-navigation ul li a' => array(
 					'font-family' => '"%s", sans-serif',
 				),
 			),
