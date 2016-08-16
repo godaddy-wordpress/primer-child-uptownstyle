@@ -1,18 +1,19 @@
-/*
-Theme Name: Uptown Style
-Theme URI: http://godaddy.com
-Author: GoDaddy
-Author URI: http://godaddy.com
-Description: A child theme for Primer with a focus on elegance and beauty.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: uptown_style
-Domain Path: /languages/
-Tags:
-Template: primer
+@import "common/variables";
+@import "common/mixins";
+@import "common/normalize";
+@import "components/typography";
+@import "components/elements";
+@import "components/lists";
+@import "components/tables";
+@import "components/forms";
+@import "components/buttons";
+@import "components/links";
+@import "components/media";
+@import "components/captions";
+@import "components/galleries";
+@import "modules/alignments";
 
-This theme, like WordPress, is licensed under the GPL.
-
-*/
-
+body {
+	margin: 20px;
+	background-color: #fff;
+}

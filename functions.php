@@ -7,9 +7,8 @@
  */
 function uptown_move_elements() {
 
-	remove_action( 'primer_before_site_navigation',  'primer_add_mobile_menu' );
-	remove_action( 'primer_after_header',            'primer_add_primary_navigation' );
-	remove_action( 'primer_header',                  'primer_add_hero' );
+	remove_action( 'primer_after_header',  'primer_add_primary_navigation' );
+	remove_action( 'primer_header',        'primer_add_hero' );
 
 	add_action( 'primer_header',       'primer_add_primary_navigation' );
 
@@ -21,21 +20,6 @@ function uptown_move_elements() {
 
 }
 add_action( 'template_redirect', 'uptown_move_elements' );
-
-/**
- * Add child and parent theme files.
- *
- * @action wp_enqueue_scripts
- * @since 1.0.0
- */
-function uptown_enqueue_styles() {
-
-	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-	wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css', array( 'parent-style' ) );
-
-}
-add_action( 'wp_enqueue_scripts', 'uptown_enqueue_styles' );
-
 
 /**
  * Register Footer Menu.
@@ -66,19 +50,6 @@ function uptown_add_footer_navigation() {
 
 }
 add_action( 'primer_site_info', 'uptown_add_footer_navigation' );
-
-/**
- * Remove primer navigation and add uptown navigation
- *
- * @action wp_print_scripts
- * @package Uptown Style
- */
-function uptown_navigation() {
-
-	wp_dequeue_script( 'primer-navigation' );
-
-}
-add_action( 'wp_print_scripts', 'uptown_navigation', 100 );
 
 /**
  * Register sidebar areas.
@@ -221,7 +192,7 @@ function uptown_colors() {
 			'label'   => __( 'Link Color', 'uptown_style' ),
 			'default' => '#54ccbe',
 			'css'     => array(
-				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget a, .main-navigation-container .menu li.current-menu-item > a:hover, .main-navigation-container .menu li.current-menu-item > a' => array(
+				'a, a:visited, .entry-footer a, .sticky .entry-title a:before, .footer-widget-area .footer-widget a, .main-navigation-container .menu li.current-menu-item > a:hover' => array(
 					'color' => '%1$s',
 				),
 			),

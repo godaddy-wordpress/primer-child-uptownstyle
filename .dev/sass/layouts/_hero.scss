@@ -1,0 +1,50 @@
+.hero {
+	color: white;
+	clear: both;
+	padding: 40px;
+	text-align: center;
+	background-color: #ccc;
+
+	.hero-inner{
+		border: 3px solid rgba(255,255,255,.8);
+		padding: 20px;
+	}
+
+	.widget {
+		margin-bottom: 1em;
+		font-size: 1.2em;
+		font-weight: 300;
+		background: none;
+
+		&::last-child {
+			margin-bottom: 0;
+		}
+
+		.widget-title{
+			font-style: italic;
+			font-weight: bold;
+		}
+
+		h1,h2,h3,h4,h5,h6,p,ul,ol,li{
+			color: white;
+		}
+
+		ul, ol {
+			padding-left: 0;
+
+			li {
+				list-style: none;
+			}
+		}
+
+		input, select, textarea {
+			color: $color__text-input;
+		}
+	}
+
+	label, input, select, textarea {
+		display: inline;
+		width: auto;
+	}
+
+}

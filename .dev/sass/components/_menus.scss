@@ -1,0 +1,257 @@
+.main-navigation-container {
+	@include clearfix;
+	text-align: center;
+	width: 100%;
+}
+
+.main-navigation {
+	@include container($container-size);
+	display: none;
+
+	@media #{$medium-up}{
+		display: block;
+	}
+
+	.menu-main-menu-container {
+
+		@media #{$medium-up}{
+			width: auto;
+			text-align: center;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+		text-align: center;
+
+		a{
+			color: $color__text-menu;
+			display: block;
+			padding: 1.2em .75em;
+			border-bottom: 2px solid rgba(0,0,0,.02);
+
+			@media #{$medium-up}{
+				border-bottom: none;
+			}
+		}
+
+		ul {
+			z-index: 99999;
+
+			@media #{$medium-up}{
+				background-color: $color__background-menu;
+			}
+
+			a{
+				padding: 1em .75em;
+				text-align: center;
+
+				@media #{$medium-up}{
+					text-align: left;
+					color: white;
+				}
+			}
+
+			@media #{$medium-up}{
+				position: absolute;
+				left: -999em;
+				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+
+				ul {
+					left: -999em;
+					top: 0;
+				}
+
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
+				}
+
+				a {
+					width: 200px;
+				}
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	@media #{$medium-up}{
+		li {
+			position: relative;
+			display: inline-block;
+		}
+
+		a {
+			text-decoration: none;
+			padding: .25em .75em;
+			color: $color__text-menu;
+			text-transform: uppercase;
+
+			&:hover {
+				background-color: $color__background-menu-hover;
+			}
+		}
+	}
+
+	.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current_page_parent > a,
+	.current-menu-ancestor > a {
+		font-weight: 700;
+	}
+
+	.sub-menu .menu-item-has-children > a::after {
+		position: absolute;
+		content: "";
+		width: 0;
+		height: 0;
+		right: 10px;
+		top: 50%;
+		border-bottom: 7px solid transparent;
+		border-top: 7px solid transparent;
+		border-left: 7px solid white;
+		transform: translateY(-50%);
+		display: none;
+
+		@media #{$medium-up}{
+			display: inline;
+		}
+	}
+
+	.search-form {
+		padding: 20px;
+		clear: both;
+		position: relative;
+
+		@media #{$medium-up} {
+			padding: 0;
+			float: right;
+			margin: 1em;
+			height: 48px;
+			clear: none;
+		}
+
+		.site-footer & {
+			display: inline-block;
+			float: none;
+		}
+
+		.screen-reader-text {
+			display: none;
+		}
+
+		input[type="search"] {
+			background: none;
+			border: none;
+			color: #fff;
+			font-size: 14px;
+			margin: 0;
+			position: relative;
+			padding: 10px 35px 10px 0;
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid transparentize(#fff, .8);
+		}
+
+		input[type="submit"] {
+			background: transparent url('assets/img/search-icon.png') no-repeat center bottom;
+			background-size: 13px;
+			display: block;
+			height: 21px;
+			text-indent: -9999px;
+			vertical-align: middle;
+			width: 21px;
+			padding: 0;
+			display: inline-block;
+			position: absolute;
+			right: 30px;
+			top: 27px;
+
+			@media #{$medium-up} {
+				right: 10px;
+				top: 7px;
+			}
+
+		}
+
+		::-webkit-input-placeholder,
+		:-moz-placeholder,
+		::-moz-placeholder,
+		:-ms-input-placeholder {
+		   color: #fff;
+		   font-size: 8px;
+		}
+
+	}
+}
+
+body.no-max-width .main-navigation {
+	max-width: none;
+}
+
+.menu-toggle {
+	display: inline-block;
+	margin: 0 auto;
+	width: 4rem;
+	padding: 0.6rem;
+	cursor: pointer;
+	position: relative;
+	z-index: 9999;
+
+	@media #{$medium-up}{
+		display: none;
+	}
+
+	div {
+		background-color: $color__text-menu;
+		height: 0.25rem;
+		margin: 0.43rem;
+		transform: rotate(0deg);
+		transition: .15s ease-in-out;
+		transform-origin: left center;
+	}
+
+	&.open div {
+		&:nth-child(1) {
+			transform: rotate(45deg);
+		}
+
+		&:nth-child(2) {
+			width: 0%;
+			opacity: 0;
+		}
+
+		&:nth-child(3) {
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	.site-main & {
+		margin: 0 0 1.5em;
+		overflow: hidden;
+	}
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+}
