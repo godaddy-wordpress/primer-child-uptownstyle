@@ -6,9 +6,9 @@ module.exports = function(grunt) {
 
 	var local_url = 'http://wp.dev';
 
-	if ( grunt.file.exists( 'local-url' ) ) {
+	if ( grunt.file.exists( '.dev/local-url' ) ) {
 
-		local_url = grunt.file.read( 'local-url' ).trim();
+		local_url = grunt.file.read( '.dev/local-url' ).trim();
 
 	}
 
@@ -30,7 +30,7 @@ module.exports = function(grunt) {
 				cascade: false
 			},
 			dist: {
-				src: [ '*.css', '!ie.css' ]
+				src: [ '*.css' ]
 			}
 		},
 
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 					]
 				},
 				options: {
-					proxy: local_url // this is read from the file local-url
+					proxy: local_url // this is read from the file .dev/local-url
 				}
 			}
 		},
@@ -126,8 +126,7 @@ module.exports = function(grunt) {
 			dist: {
 				files: {
 					'style.css'        : '.dev/sass/style.scss',
-					'editor-style.css' : '.dev/sass/editor-style.scss',
-					'ie.css'           : '.dev/sass/ie.scss'
+					'editor-style.css' : '.dev/sass/editor-style.scss'
 				}
 			}
 		},
