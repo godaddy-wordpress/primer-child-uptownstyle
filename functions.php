@@ -54,19 +54,6 @@ function uptown_register_nav_menu( $menu ) {
 add_filter( 'primer_nav_menus', 'uptown_register_nav_menu' );
 
 /**
- * Add foother navigation
- *
- * @action primer_site_info
- * @since 1.0.0
- */
-function uptown_add_footer_navigation() {
-
-	get_template_part( 'templates/parts/footer-navigation' );
-
-}
-add_action( 'primer_site_info', 'uptown_add_footer_navigation' );
-
-/**
  * Register sidebar areas.
  *
  * @link    http://codex.wordpress.org/Function_Reference/register_sidebar
