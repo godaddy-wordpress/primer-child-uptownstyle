@@ -22,6 +22,21 @@ function uptown_move_elements() {
 add_action( 'template_redirect', 'uptown_move_elements' );
 
 /**
+ * Set hero image target element.
+ *
+ * @filter primer_hero_image_selector
+ * @since  1.0.0
+ *
+ * @return string
+ */
+function uptown_hero_image_selector() {
+
+	return '.hero,.page-title-container';
+
+}
+add_filter( 'primer_hero_image_selector', 'uptown_hero_image_selector' );
+
+/**
  * Register Footer Menu.
  *
  * @filter primer_nav_menus
