@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uptown-style 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-15 23:30-0500\n"
+"POT-Creation-Date: 2016-08-16 09:34-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,47 +18,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:34
+#: functions.php:49
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:74
 msgid "Hero"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:76
 msgid "The Hero widget area."
 msgstr ""
 
-#: functions.php:165
+#: functions.php:167
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:176
 msgid "Footer Social Icon Color"
 msgstr ""
 
-#: functions.php:183
+#: functions.php:185
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:192
+#: functions.php:194
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:201
+#: functions.php:203
 msgid "Widget Background Color"
 msgstr ""
 
-#: functions.php:225
+#: functions.php:227
 msgid "Bronze"
 msgstr ""
 
-#: functions.php:251
+#: functions.php:253
 msgid "Primary Font"
 msgstr ""
 
-#: functions.php:260
+#: functions.php:262
 msgid "Header Font"
 msgstr ""
 
