@@ -28,7 +28,10 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: bold;
 	line-height: $font__line-height-headings;
 	text-rendering: optimizeLegibility;
-	color: $color__text-heading;
+
+	#content &{
+		color: $color__text-heading;
+	}
 }
 
 h1 {

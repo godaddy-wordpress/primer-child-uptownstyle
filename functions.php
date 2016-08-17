@@ -84,6 +84,7 @@ function uptown_colors() {
 
 	return array(
 		'background_color' => array(
+			'label'   => esc_html__( 'Background Color', 'uptown-style' ),
 			'default' => '#ffffff',
 			'css'     => array(
 				'body' => array(
@@ -91,12 +92,75 @@ function uptown_colors() {
 				),
 			),
 		),
-		'button_color' => array(
-			'label'   => esc_html__( 'Button Color', 'uptown-style' ),
+		'header_background_color' => array(
+			'label'   => esc_html__( 'Header Background Color', 'uptown-style' ),
+			'default' => '#ffffff',
+			'css'     => array(
+				'.site-header' => array(
+					'background-color' => '%1$s',
+				),
+			),
+		),
+		'header_text_color' => array(
+			'label'   => esc_html__( 'Header Text Color', 'uptown-style' ),
+			'default' => '#222222',
+			'css'     => array(
+				'.site-title-wrapper .site-title a,.main-navigation ul a' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
+				'.site-description' => array(
+					'color' => 'rgba(%1$s, 0.6)',
+				),
+			),
+		),
+		'menu_background_color' => array(
+			'label'   => esc_html__( 'Menu Background Color', 'uptown-style' ),
 			'default' => '#b5345f',
 			'css'     => array(
-				'.cta, button, input[type="button"], input[type="reset"], input[type="submit"]:not(.search-submit), a.fl-button' => array(
+				'.main-navigation ul ul' => array(
 					'background-color' => '%1$s',
+				),
+			),
+		),
+		'menu_text_color' => array(
+			'label'   => esc_html__( 'Menu Text Color', 'uptown-style' ),
+			'default' => '#ffffff',
+			'css'     => array(
+				'.main-navigation ul ul a' => array(
+					'color' => '%1$s',
+				),
+				'.main-navigation .sub-menu .menu-item-has-children > a::after' => array(
+					'border-left-color' => '%1$s',
+				)
+			),
+		),
+		'button_color' => array(
+			'label'   => esc_html__( 'Button Color', 'uptown-style' ),
+			'default' => '#ffffff',
+			'css'     => array(
+				'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+					'color' => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
+				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover' => array(
+					'color' => 'rgba(%1$s, 0.8)',
+				),
+			),
+		),
+		'button_bg_color' => array(
+			'label'   => esc_html__( 'Button Background Color', 'uptown-style' ),
+			'default' => '#b5345f',
+			'css'     => array(
+				'button, a.button, a.button:visited, input[type="button"], input[type="reset"], input[type="submit"]' => array(
+					'background-color' => '%1$s',
+				),
+			),
+			'rgba_css'     => array(
+				'button:hover, a.button:hover, a.button:visited:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover' => array(
+					'background-color' => 'rgba(%1$s, 0.8)',
 				),
 			),
 		),
@@ -128,11 +192,20 @@ function uptown_colors() {
 			),
 		),
 		'w_background_color' => array(
-			'label'   => esc_html__( 'Widget Background Color', 'uptown-style' ),
+			'label'   => esc_html__( 'Footer Widget Background Color', 'uptown-style' ),
 			'default' => '#3f3244',
 			'css'     => array(
 				'.site-footer' => array(
 					'background-color' => '%1$s',
+				),
+			),
+		),
+		'w_text_color' => array(
+			'label'   => esc_html__( 'Footer Widget Text Color', 'uptown-style' ),
+			'default' => '#ffffff',
+			'css'     => array(
+				'.site-footer-inner' => array(
+					'color' => '%1$s',
 				),
 			),
 		),
@@ -156,11 +229,101 @@ function uptown_color_schemes() {
 			'label'  => esc_html__( 'Bronze', 'uptown-style' ),
 			'colors' => array(
 				'background_color'        => '#ffffff',
-				'button_color'            => '#aeaeae',
-				'footer_social_color'     => '#c19072',
+				'header_background_color' => '#ffffff',
+				'header_text_color'       => '#222222',
+				'menu_background_color'   => '#b1a18b',
+				'menu_text_color'         => '#ffffff',
+				'button_color'            => '#ffffff',
+				'button_bg_color'         => '#b1a18b',
+				'footer_social_color'     => '#b1a18b',
 				'footer_background_color' => '#ffffff',
-				'link_color'              => '#c19072',
-				'w_background_color'      => '#ffffff',
+				'link_color'              => '#b1a18b',
+				'w_background_color'      => '#b1a18b',
+				'w_text_color'            => '#ffffff',
+			),
+		),
+		'red' => array(
+			'label'  => esc_html__( 'Red', 'uptown-style' ),
+			'colors' => array(
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#ffffff',
+				'header_text_color'       => '#222222',
+				'menu_background_color'   => '#cc494f',
+				'button_color'            => '#ffffff',
+				'button_bg_color'         => '#cc494f',
+				'footer_social_color'     => '#cc494f',
+				'footer_background_color' => '#ffffff',
+				'link_color'              => '#cc494f',
+				'w_background_color'      => '#cc494f',
+				'w_text_color'            => '#ffffff',
+			),
+		),
+		'blue' => array(
+			'label'  => esc_html__( 'Blue', 'uptown-style' ),
+			'colors' => array(
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#ffffff',
+				'header_text_color'       => '#222222',
+				'menu_background_color'   => '#499ccc',
+				'menu_text_color'         => '#ffffff',
+				'button_color'            => '#ffffff',
+				'button_bg_color'         => '#499ccc',
+				'footer_social_color'     => '#499ccc',
+				'footer_background_color' => '#ffffff',
+				'link_color'              => '#499ccc',
+				'w_background_color'      => '#d6ebf9',
+				'w_text_color'            => '#636363',
+			),
+		),
+		'green' => array(
+			'label'  => esc_html__( 'Green', 'uptown-style' ),
+			'colors' => array(
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#ffffff',
+				'header_text_color'       => '#222222',
+				'menu_background_color'   => '#62bf7c',
+				'menu_text_color'         => '#ffffff',
+				'button_color'            => '#ffffff',
+				'button_bg_color'         => '#62bf7c',
+				'footer_social_color'     => '#62bf7c',
+				'footer_background_color' => '#ffffff',
+				'link_color'              => '#62bf7c',
+				'w_background_color'      => '#f2f2f2',
+				'w_text_color'            => '#888888',
+			),
+		),
+		'orange' => array(
+			'label'  => esc_html__( 'Orange', 'uptown-style' ),
+			'colors' => array(
+				'background_color'        => '#ffffff',
+				'header_background_color' => '#ffffff',
+				'header_text_color'       => '#222222',
+				'menu_background_color'   => '#df6135',
+				'menu_text_color'         => '#ffffff',
+				'button_color'            => '#ffffff',
+				'button_bg_color'         => '#df6135',
+				'footer_social_color'     => '#df6135',
+				'footer_background_color' => '#ffffff',
+				'link_color'              => '#df6135',
+				'w_background_color'      => '#222222',
+				'w_text_color'            => '#ffffff',
+			),
+		),
+		'yellow' => array(
+			'label'  => esc_html__( 'Yellow', 'uptown-style' ),
+			'colors' => array(
+				'background_color'        => '#e9e73d',
+				'header_background_color' => '#e9e73d',
+				'header_text_color'       => '#222222',
+				'menu_background_color'   => '#222222',
+				'menu_text_color'         => '#ffffff',
+				'button_color'            => '#222222',
+				'button_bg_color'         => '#e9e73d',
+				'footer_social_color'     => '#222222',
+				'footer_background_color' => '#e9e73d',
+				'link_color'              => '#777777',
+				'w_background_color'      => '#e9e73d',
+				'w_text_color'            => '#3a3a3a',
 			),
 		),
 	);

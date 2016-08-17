@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uptown-style 1.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-16 09:34-0500\n"
+"POT-Creation-Date: 2016-08-16 22:26-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,48 +18,76 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: functions.php:49
-msgid "Footer Menu"
+#: functions.php:87
+msgid "Background Color"
 msgstr ""
 
-#: functions.php:74
-msgid "Hero"
+#: functions.php:96
+msgid "Header Background Color"
 msgstr ""
 
-#: functions.php:76
-msgid "The Hero widget area."
+#: functions.php:105
+msgid "Header Text Color"
 msgstr ""
 
-#: functions.php:167
+#: functions.php:119
+msgid "Menu Background Color"
+msgstr ""
+
+#: functions.php:128
+msgid "Menu Text Color"
+msgstr ""
+
+#: functions.php:140
 msgid "Button Color"
 msgstr ""
 
-#: functions.php:176
+#: functions.php:154
+msgid "Button Background Color"
+msgstr ""
+
+#: functions.php:168
 msgid "Footer Social Icon Color"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:177
 msgid "Footer Background Color"
 msgstr ""
 
-#: functions.php:194
+#: functions.php:186
 msgid "Link Color"
 msgstr ""
 
-#: functions.php:203
-msgid "Widget Background Color"
+#: functions.php:195
+msgid "Footer Widget Background Color"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:204
+msgid "Footer Widget Text Color"
+msgstr ""
+
+#: functions.php:229
 msgid "Bronze"
 msgstr ""
 
-#: functions.php:253
-msgid "Primary Font"
+#: functions.php:246
+msgid "Red"
 msgstr ""
 
 #: functions.php:262
-msgid "Header Font"
+msgid "Blue"
+msgstr ""
+
+#: functions.php:279
+msgid "Green"
+msgstr ""
+
+#: functions.php:296
+msgid "Orange"
+msgstr ""
+
+#: functions.php:313
+msgid "Yellow"
 msgstr ""
 
 #: node_modules/grunt-pot/test/fixtures/some-file.php:3
