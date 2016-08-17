@@ -1,15 +1,15 @@
 <?php
 
 /**
- * Move elements around the theme.
+ * Move some elements around.
  *
  * @action template_redirect
  * @since  1.0.0
  */
 function uptown_move_elements() {
 
-	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 	remove_action( 'primer_header',       'primer_add_hero' );
+	remove_action( 'primer_after_header', 'primer_add_primary_navigation' );
 
 	add_action( 'primer_header', 'primer_add_primary_navigation' );
 
@@ -38,8 +38,26 @@ function uptown_hero_image_selector() {
 add_filter( 'primer_hero_image_selector', 'uptown_hero_image_selector' );
 
 /**
+ * Set the default hero image description.
  *
- * Register font types.
+ * @filter primer_default_hero_images
+ * @since  1.0.0
+ *
+ * @param  array $defaults
+ *
+ * @return array
+ */
+function uptown_default_hero_images( $defaults ) {
+
+	$defaults['default']['description'] = esc_html__( 'Flowers in a vase', 'uptown-style' );
+
+	return $defaults;
+
+}
+add_filter( 'primer_default_hero_images', 'uptown_default_hero_images' );
+
+/**
+ * Set font types.
  *
  * @filter primer_font_types
  * @since  1.0.0
@@ -70,17 +88,19 @@ function uptown_font_types( $font_types ) {
 	return primer_array_replace_recursive( $font_types, $overrides );
 
 }
-add_action( 'primer_font_types', 'uptown_font_types' );
+add_filter( 'primer_font_types', 'uptown_font_types' );
 
 /**
- * Register colors.
+ * Set colors.
  *
- * @action primer_colors
+ * @filter primer_colors
  * @since  1.0.0
+ *
+ * @param  array $colors
  *
  * @return array
  */
-function uptown_colors() {
+function uptown_colors( $colors ) {
 
 	return array(
 		'background_color' => array(
@@ -212,17 +232,19 @@ function uptown_colors() {
 	);
 
 }
-add_action( 'primer_colors', 'uptown_colors' );
+add_filter( 'primer_colors', 'uptown_colors' );
 
 /**
- * Register color schemes.
+ * Set color schemes.
  *
- * @action primer_color_schemes
+ * @filter primer_color_schemes
  * @since  1.0.0
+ *
+ * @param  array $color_schemes
  *
  * @return array
  */
-function uptown_color_schemes() {
+function uptown_color_schemes( $color_schemes ) {
 
 	return array(
 		'bronze' => array(
@@ -329,4 +351,4 @@ function uptown_color_schemes() {
 	);
 
 }
-add_action( 'primer_color_schemes', 'uptown_color_schemes' );
+add_filter( 'primer_color_schemes', 'uptown_color_schemes' );
