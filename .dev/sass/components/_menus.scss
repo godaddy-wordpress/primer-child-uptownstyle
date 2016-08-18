@@ -8,6 +8,10 @@
 	@include container($container-size);
 	display: none;
 
+  &.open {
+    display: block;
+  }
+
 	@media #{$medium-up}{
 		display: block;
 	}
