@@ -1,26 +1,75 @@
 .main-navigation-container {
-	@include clearfix;
-	text-align: center;
-	width: 100%;
+	clear: both;
+	background-color: $color__background-menu;
 }
 
 .main-navigation {
-	@include container($container-size);
+	font-size: 1rem;
+	font-weight: 500;
 	display: none;
 
-  &.open {
-    display: block;
-  }
+	&.open {
+		display: block;
+	}
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
 		display: block;
 	}
 
 	.menu-main-menu-container {
-
-		@media #{$medium-up}{
+		@media #{$medium-up} {
 			width: auto;
 			text-align: center;
+		}
+	}
+
+	.expand{
+		font-size: 1.8rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 19px 0;
+		width: 50px;
+		line-height: 1;
+		text-align: center;
+		border-bottom: none;
+		border-left: 2px solid rgba(0, 0, 0, 0.05);
+		text-indent: 0;
+
+		&:hover{
+			background-color: rgba(0,0,0,.1);
+		}
+
+		&:before{
+			content: "+";
+		}
+
+		@media #{$medium-up}{
+			display: none;
+		}
+
+	}
+
+	.menu-item-has-children{
+		position: relative;
+
+		&.open > .expand:before{
+			content: "-";
+		}
+	}
+
+	@media #{$small-only}{
+
+		li li{
+			text-indent: 1rem;
+		}
+
+		li li li{
+			text-indent: 1.5rem;
+		}
+
+		.open > .sub-menu{
+			display: block;
 		}
 	}
 
@@ -28,37 +77,35 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		text-align: center;
 
-		a{
+		a {
 			color: $color__text-menu;
 			display: block;
 			padding: 1.2em .75em;
-			border-bottom: 2px solid rgba(0,0,0,.02);
+			border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+			background-color: $color__background-menu;
 
-			@media #{$medium-up}{
+			@media #{$medium-up} {
+				padding-top: 1.5em;
+				padding-bottom: 1.5em;
 				border-bottom: none;
 			}
 		}
 
 		ul {
 			z-index: 99999;
+			display: none;
 
-			@media #{$medium-up}{
-				background-color: $color__background-menu;
-			}
+			a {
 
-			a{
-				padding: 1em .75em;
-				text-align: center;
-
-				@media #{$medium-up}{
+				@media #{$medium-up} {
+					padding: 1em .75em;
 					text-align: left;
-					color: white;
 				}
 			}
 
-			@media #{$medium-up}{
+			@media #{$medium-up} {
+				display: block;
 				position: absolute;
 				left: -999em;
 				box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -87,7 +134,8 @@
 		}
 	}
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
+
 		li {
 			position: relative;
 			display: inline-block;
@@ -99,8 +147,9 @@
 			color: $color__text-menu;
 			text-transform: uppercase;
 
-			&:hover {
-				background-color: $color__background-menu-hover;
+			&:hover,
+			&:visited:hover {
+				background-color: darken($color__background-menu,5%);
 			}
 		}
 	}
@@ -122,79 +171,13 @@
 		top: 50%;
 		border-bottom: 7px solid transparent;
 		border-top: 7px solid transparent;
-		border-left: 7px solid white;
+		border-left: 7px solid $color__text-menu;
 		transform: translateY(-50%);
 		display: none;
 
-		@media #{$medium-up}{
+		@media #{$medium-up} {
 			display: inline;
 		}
-	}
-
-	.search-form {
-		padding: 20px;
-		clear: both;
-		position: relative;
-
-		@media #{$medium-up} {
-			padding: 0;
-			float: right;
-			margin: 1em;
-			height: 48px;
-			clear: none;
-		}
-
-		.site-footer & {
-			display: inline-block;
-			float: none;
-		}
-
-		.screen-reader-text {
-			display: none;
-		}
-
-		input[type="search"] {
-			background: none;
-			border: none;
-			color: #fff;
-			font-size: 14px;
-			margin: 0;
-			position: relative;
-			padding: 10px 35px 10px 0;
-			display: block;
-			width: 100%;
-			border-bottom: 1px solid transparentize(#fff, .8);
-		}
-
-		input[type="submit"] {
-			background: transparent url('assets/img/search-icon.png') no-repeat center bottom;
-			background-size: 13px;
-			display: block;
-			height: 21px;
-			text-indent: -9999px;
-			vertical-align: middle;
-			width: 21px;
-			padding: 0;
-			display: inline-block;
-			position: absolute;
-			right: 30px;
-			top: 27px;
-
-			@media #{$medium-up} {
-				right: 10px;
-				top: 7px;
-			}
-
-		}
-
-		::-webkit-input-placeholder,
-		:-moz-placeholder,
-		::-moz-placeholder,
-		:-ms-input-placeholder {
-		   color: #fff;
-		   font-size: 8px;
-		}
-
 	}
 }
 
@@ -205,13 +188,15 @@ body.no-max-width .main-navigation {
 .menu-toggle {
 	display: inline-block;
 	margin: 0 auto;
-	width: 4rem;
+	width: 3.9rem;
 	padding: 0.6rem;
 	cursor: pointer;
 	position: relative;
 	z-index: 9999;
+	margin-top: 10px;
+	margin-left: 10px;
 
-	@media #{$medium-up}{
+	@media #{$medium-up} {
 		display: none;
 	}
 
