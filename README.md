@@ -1,1 +1,0 @@
-# uptown-style-theme
