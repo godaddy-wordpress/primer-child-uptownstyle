@@ -12,21 +12,16 @@
 		padding: 0 20px;
 
 		.social-menu {
-
 			a {
 				background: none;
 			}
-
 		}
-
 	}
 
 	.site-info-text,
 	.site-info-text a {
-		color: $color__text-footer;
 		font-size: .875rem;
 	}
-
 }
 
 .footer-widget-area {
@@ -105,16 +100,17 @@ body.no-max-width .footer-widget-area {
 	.footer-nav,
 	.social-menu {
 		text-align: center;
+
 		@include span(12);
+
 		margin-bottom: 30px;
 	}
 }
 
-.site-footer-inner{
+.site-footer-inner {
 	color: $color__text-footerwidget;
 
 	.footer-widget {
-
 		.widget {
 			background-color: transparent;
 			font-size: .875rem;
@@ -125,7 +121,6 @@ body.no-max-width .footer-widget-area {
 			p {
 				font-size: .875rem;
 			}
-
 		}
 
 		.widget-title {
@@ -134,9 +129,7 @@ body.no-max-width .footer-widget-area {
 			font-style: normal;
 			text-transform: uppercase;
 		}
-
 	}
-
 }
 
 body.no-max-width .site-info-wrapper .site-info {
@@ -144,7 +137,6 @@ body.no-max-width .site-info-wrapper .site-info {
 }
 
 .social-menu {
-
 	ul {
 		list-style: none;
 		margin: 0;
@@ -169,6 +161,7 @@ body.no-max-width .site-info-wrapper .site-info {
 
 	a {
 		@extend .genericon;
+
 		@extend .genericon-link;
 
 		font-size: 0;
@@ -330,7 +323,7 @@ body.no-max-width .site-info-wrapper .site-info {
 			text-align: center;
 			text-transform: uppercase;
 
-			&:first-of-type{
+			&:first-of-type {
 				margin-left: 0;
 			}
 
@@ -343,17 +336,14 @@ body.no-max-width .site-info-wrapper .site-info {
 				border-bottom: 1px solid transparent;
 				padding-bottom: 5px;
 
-				&:hover{
+				&:hover {
 					border-color: $color__text-footer;
 
-					&:after{
+					&:after {
 						padding-left: 10px;
 					}
 				}
 			}
-
 		}
-
 	}
-
 }

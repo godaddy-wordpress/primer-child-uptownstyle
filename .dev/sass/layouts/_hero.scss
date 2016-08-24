@@ -6,8 +6,8 @@
 	background-color: #ccc;
 	background-size: cover;
 
-	.hero-inner{
-		border: 3px solid rgba(255,255,255,.8);
+	.hero-inner {
+		border: 3px solid rgba(255, 255, 255, 0.5);
 		padding: 20px;
 	}
 
@@ -21,12 +21,12 @@
 			margin-bottom: 0;
 		}
 
-		.widget-title{
+		.widget-title {
 			font-style: italic;
 			font-weight: bold;
 		}
 
-		h1,h2,h3,h4,h5,h6,p,ul,ol,li{
+		h1, h2, h3, h4, h5, h6, p, ul, ol, li {
 			color: white;
 		}
 
@@ -47,5 +47,4 @@
 		display: inline;
 		width: auto;
 	}
-
 }

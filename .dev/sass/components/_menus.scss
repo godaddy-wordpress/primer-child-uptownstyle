@@ -1,6 +1,5 @@
 .main-navigation-container {
 	clear: both;
-	background-color: $color__background-menu;
 }
 
 .main-navigation {
@@ -83,7 +82,6 @@
 			display: block;
 			padding: 1.2em .75em;
 			border-bottom: 2px solid rgba(0, 0, 0, 0.05);
-			background-color: $color__background-menu;
 
 			@media #{$medium-up} {
 				padding-top: 1.5em;

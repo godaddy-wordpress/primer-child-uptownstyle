@@ -1,7 +1,7 @@
 .site-header-wrapper {
 	@include container($container-size);
 
-	body.no-max-width &{
+	body.no-max-width & {
 		max-width: none;
 	}
 }
@@ -12,16 +12,17 @@
 	background-size: cover;
 	text-align: center;
 
-	.row{
+	.row {
 		@include container($container-size);
 
 		.site-title-wrapper,
-		.hero{
+		.hero {
 			@include span(12);
 		}
 
-		@media #{$medium-up}{
-			.hero{
+		@media #{$medium-up} {
+
+			.hero {
 				@include span(7);
 			}
 		}
@@ -30,6 +31,7 @@
 
 .site-title-wrapper {
 	@include span(12);
+
 	position: relative;
 	z-index: 1;
 	padding: 3% 1rem;
@@ -61,16 +63,11 @@
 }
 
 .page-title-container {
-	color: white;
 	padding: 40px;
 	text-align: center;
-	background-color: #ccc;
 	background-size: cover;
 
 	.page-header {
-		border: 3px solid rgba(255,255,255,.8);
-		padding: 40px;
-
 		h1 {
 			color: white;
 			margin: 0;
@@ -93,7 +90,6 @@ body.no-max-width .page-title-container .page-header {
 	}
 
 	.widget {
-
 		.widget-title {
 			color: #fff;
 			font-size: 2.5rem;
@@ -109,7 +105,7 @@ body.no-max-width .page-title-container .page-header {
 			margin: 0;
 		}
 
-		.button{
+		.button {
 			margin-top: 24px;
 			margin-bottom: 0.5em;
 		}
@@ -121,10 +117,8 @@ body.no-max-width .page-title-container .page-header {
 			}
 
 			p {
-				font-size: 1.2rem
+				font-size: 1.2rem;
 			}
 		}
-
 	}
-
 }
