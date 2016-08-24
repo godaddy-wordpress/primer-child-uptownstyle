@@ -1559,8 +1559,7 @@ body.no-max-width .page-title-container .page-header {
   .hero .widget p {
     color: #fff;
     font-size: 1rem;
-    font-weight: 200;
-    margin: 0; }
+    font-weight: 200; }
   .hero .widget .button {
     margin-top: 24px;
     margin-bottom: 0.5em; }
@@ -1594,7 +1593,7 @@ body.no-max-width .page-title-container .page-header {
     .hero .widget .widget-title {
       font-style: italic;
       font-weight: bold; }
-    .hero .widget h1, .hero .widget h2, .hero .widget h3, .hero .widget h4, .hero .widget h5, .hero .widget h6, .hero .widget p, .hero .widget ul, .hero .widget ol, .hero .widget li {
+    .hero .widget .widget-title, .hero .widget h1, .hero .widget h2, .hero .widget h3, .hero .widget h4, .hero .widget h5, .hero .widget h6, .hero .widget p, .hero .widget ul, .hero .widget ol, .hero .widget li {
       color: white; }
     .hero .widget ul, .hero .widget ol {
       padding-left: 0; }
