@@ -10,12 +10,6 @@
 	.site-info {
 		overflow: visible;
 		padding: 0 20px;
-
-		.social-menu {
-			a {
-				background: none;
-			}
-		}
 	}
 
 	.site-info-text,
@@ -167,8 +161,8 @@ body.no-max-width .site-info-wrapper .site-info {
 		font-size: 0;
 		text-indent: -9999em;
 		border: 0;
-		width: 48px;
-		height: 48px;
+		width: 36px;
+		height: 36px;
 		transition: 200ms opacity;
 		color: $color__link;
 		border-radius: 3px;
@@ -177,7 +171,7 @@ body.no-max-width .site-info-wrapper .site-info {
 			-webkit-font-smoothing: subpixel-antialiased;
 			padding: 7px;
 			display: inline-block;
-			font-size: 30px;
+			font-size: 22px;
 		}
 
 		&:hover {
