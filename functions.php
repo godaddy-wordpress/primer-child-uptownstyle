@@ -165,7 +165,7 @@ function uptown_colors( $colors ) {
 			'default' => '#ffffff',
 		),
 		'hero_background_color' => array(
-			'default' => '#3f3244',
+			'default' => '#312538',
 		),
 		'menu_background_color' => array(
 			'default' => '#ffffff',
@@ -204,6 +204,7 @@ function uptown_color_schemes( $color_schemes ) {
 		'blush' => array(
 			'colors' => array(
 				'menu_background_color'          => '#ffffff',
+				'hero_background_color'          => '#2c3845',
 				'footer_widget_background_color' => '#303d4c',
 			),
 		),
@@ -222,6 +223,7 @@ function uptown_color_schemes( $color_schemes ) {
 		'cool' => array(
 			'colors' => array(
 				'menu_background_color'          => '#ffffff',
+				'hero_background_color'          => '#2c3845',
 				'footer_widget_background_color' => '#303d4c',
 			),
 		),
@@ -241,6 +243,7 @@ function uptown_color_schemes( $color_schemes ) {
 		'iguana' => array(
 			'colors' => array(
 				'menu_background_color'          => '#ffffff',
+				'hero_background_color'          => '#2c3845',
 				'footer_widget_background_color' => '#303d4c',
 			),
 		),
