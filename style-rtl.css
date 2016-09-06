@@ -662,7 +662,7 @@ a {
       color: #222;
       text-transform: uppercase; }
       .main-navigation a:hover, .main-navigation a:visited:hover {
-        background-color: #f2f2f2; } }
+        background-color: rgba(0, 0, 0, 0.05); } }
   .main-navigation .current_page_item > a,
   .main-navigation .current-menu-item > a,
   .main-navigation .current_page_ancestor > a,
@@ -1578,7 +1578,9 @@ body.no-max-width .page-title-container .page-header {
   text-align: center;
   background-color: #ccc;
   -webkit-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat; }
   .hero .hero-inner {
     border: 3px solid rgba(255, 255, 255, 0.5);
     padding: 20px; }
