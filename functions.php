@@ -162,13 +162,13 @@ function uptown_colors( $colors ) {
 		 * Link / Button colors
 		 */
 		'link_color' => array(
-			'default'  => '#54ccbe',
+			'default' => '#54ccbe',
 		),
 		'button_color' => array(
-			'default'  => '#b5345f',
+			'default' => '#b5345f',
 		),
 		'button_text_color' => array(
-			'default'  => '#ffffff',
+			'default' => '#ffffff',
 		),
 		/**
 		 * Background colors
@@ -217,30 +217,30 @@ function uptown_color_schemes( $color_schemes ) {
 	$overrides = array(
 		'blush' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['blush']['base'],
-				'button_color'                     => $color_schemes['blush']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['blush']['base'],
+				'button_color'                   => $color_schemes['blush']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 		'bronze' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['bronze']['base'],
-				'button_color'                     => $color_schemes['bronze']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['bronze']['base'],
+				'button_color'                   => $color_schemes['bronze']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 		'canary' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['canary']['base'],
-				'button_color'                     => $color_schemes['canary']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['canary']['base'],
+				'button_color'                   => $color_schemes['canary']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 		'cool' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['cool']['base'],
-				'button_color'                     => $color_schemes['cool']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['cool']['base'],
+				'button_color'                   => $color_schemes['cool']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 		'dark' => array(
@@ -298,23 +298,23 @@ function uptown_color_schemes( $color_schemes ) {
 		),
 		'rose' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['rose']['base'],
-				'button_color'                     => $color_schemes['rose']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['rose']['base'],
+				'button_color'                   => $color_schemes['rose']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 		'tangerine' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['tangerine']['base'],
-				'button_color'                     => $color_schemes['tangerine']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['tangerine']['base'],
+				'button_color'                   => $color_schemes['tangerine']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 		'turquoise' => array(
 			'colors' => array(
-				'link_color'                       => $color_schemes['turquoise']['base'],
-				'button_color'                     => $color_schemes['turquoise']['base'],
-				'footer_widget_background_color'   => '#303d4c',
+				'link_color'                     => $color_schemes['turquoise']['base'],
+				'button_color'                   => $color_schemes['turquoise']['base'],
+				'footer_widget_background_color' => '#303d4c',
 			),
 		),
 	);
