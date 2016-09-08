@@ -1980,6 +1980,14 @@ body.no-max-width .site-info-wrapper .site-info {
 .entry-meta {
   font-size: 90%;
   color: #686868; }
+  .entry-meta > span {
+    margin-left: 1em; }
+    .entry-meta > span:last-child {
+      margin-left: 0; }
+    @media only screen and (max-width: 40.063em) {
+      .entry-meta > span {
+        display: block;
+        margin-left: 0; } }
 
 @media only screen and (max-width: 40.063em) {
   .comments-number {

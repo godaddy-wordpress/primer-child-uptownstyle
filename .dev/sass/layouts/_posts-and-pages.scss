@@ -48,6 +48,19 @@
 .entry-meta {
 	font-size: 90%;
 	color: $color__text-secondary;
+
+	> span {
+		margin-right: 1em;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media #{$small-only} {
+			display: block;
+			margin-right: 0;
+		}
+	}
 }
 
 @media #{$small-only} {
