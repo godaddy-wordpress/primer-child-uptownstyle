@@ -48,7 +48,7 @@ Uptown Style is a Primer child theme with elegance and class.
 
 **Contributing:**
 
-You can fork and contribute to Uptown Style by visiting [our public repo on GitHub](https://github.com/godaddy/wp-Uptown Style-theme).
+You can fork and contribute to Uptown Style by visiting [our public repo on GitHub](https://github.com/godaddy/wp-uptown-style-theme).
 
 == Installation ==
 
