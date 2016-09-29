@@ -7,11 +7,11 @@ Stable tag:        1.0.0
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Uptown Style is a Primer child theme with elegance and class.
+Uptown Style is a GoDaddy Primer child theme with elegance and class.
 
 == Description ==
 
-Uptown Style is a Primer child theme with elegance and class.
+Uptown Style is a GoDaddy Primer child theme with elegance and class.
 
 **Languages Supported:**
 
@@ -48,7 +48,7 @@ Uptown Style is a Primer child theme with elegance and class.
 
 **Contributing:**
 
-You can fork and contribute to Uptown Style by visiting [our public repo on GitHub](https://github.com/godaddy/wp-Uptown Style-theme).
+You can fork and contribute to Uptown Style by visiting [our public repo on GitHub](https://github.com/godaddy/wp-uptown-style-theme).
 
 == Installation ==
 
