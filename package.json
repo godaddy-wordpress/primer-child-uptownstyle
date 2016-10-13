@@ -6,7 +6,6 @@
   "author": "GoDaddy",
   "license": "GPL-2.0",
   "repository": "godaddy/wp-uptown-style-theme",
-  "homepage": "https://github.com/godaddy/wp-uptown-style-theme",
   "bugs": {
     "url": "https://github.com/godaddy/wp-uptown-style-theme/issues"
   },
@@ -23,5 +22,9 @@
     "load-grunt-tasks": "~3.5.0",
     "matchdep": "~1.0.1",
     "susy": "~2.2.12"
+  },
+  "scripts": {
+    "version": "grunt version && grunt && git add -A .",
+    "postversion": "git push && git push --tags"
   }
 }
