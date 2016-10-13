@@ -1,0 +1,27 @@
+sudo: false
+
+language:
+  - php
+  - node_js
+
+before_script:
+  - curl -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli-nightly.phar > /tmp/wp-cli.phar
+
+script:
+  - echo "Deploy only"
+
+before_deploy:
+  - export RELEASE_FOLDER=uptown-style
+  - php /tmp/wp-cli.phar package install runcommand/dist-archive
+  - cp -rv ${TRAVIS_BUILD_DIR} /tmp/${RELEASE_FOLDER}
+  - mv /tmp/${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}
+  - php /tmp/wp-cli.phar dist-archive ${RELEASE_FOLDER} ${TRAVIS_BUILD_DIR}/${RELEASE_FOLDER}.zip --format=zip --debug
+
+deploy:
+  provider: releases
+  api_key:
+    secure: Y6mWxcVwPJvGTsgfEexathGOFbIIU+ihLVyzUK0hLndcNnk74Op3ZeDS5dymS9VobpAbaMIbko+Jlyua5cHkkgV89kkPXoW6auY1GRywMkYAGOoBzrFoHMBNFlbh6R55UDNDfxglIwv61iepe/LiXyYuuvNPmzi6nNH6B+d58AaV9DpPs5r8GJR/SL5jl2sqeJPcPyu5TycqfUiXEgijrvS6/bXlALkXRH12Qfq1T9ccgGZprLt6MM42YMnxiE+dGH5md6ReAzHbO6T8fHQOgA7dCiv+wk/jjoYaU7JMaCGgJ/GohAjcALoqav9rJMFxwi7aI+E7Ph3flM3L81NgHNcmW/rYDNbSad6DtKZXKQJgKZ8UA+gFY0zbqEbEXsoVegJE3EmJlQFBB6Nm+B0RmKVrlqg5A1nNZqWq5fAmUWargBkc8bivSkvnFbdis7G6WWvWVvEnbKtVIzrOeaqlnFuOgzNSDWkJrNZqPyg8jvSrVx8nuO4OWMaUy/IbpGvbNrdXnk8Vv5JspJKcJu3ZXud5yqAzWWgmBD6I+3l5kbECYIVpKuORhqcv/dwuyXkhwRncd82lCMkShLNJF7piuDvfQLPlL7ycDyyWjsgjg1FXtoUlp5n3sVEkYLndntcdh8mfhtL+xIw/Dx62QGa7ZFaU8mP5UMUB5iESXjgZk3A=
+  file: uptown-style.zip
+  on:
+    tags: true
+    repo: godaddy/wp-uptown-style-theme
