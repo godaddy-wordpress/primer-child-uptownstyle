@@ -20,12 +20,9 @@ function uptown_move_elements() {
 	remove_action( 'primer_header',       'primer_add_hero',               7 );
 	remove_action( 'primer_after_header', 'primer_add_primary_navigation', 11 );
 	remove_action( 'primer_after_header', 'primer_add_page_title',         12 );
-	remove_action( 'primer_after_header', 'primer_generate_cart_submenu',  11 );
 
 	add_action( 'primer_after_header', 'primer_add_hero',               7 );
 	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
-	add_action( 'primer_header',       'primer_generate_cart_submenu',  11 );
-
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 
 		add_action( 'primer_hero', 'primer_add_page_title', 12 );
@@ -177,6 +174,11 @@ function uptown_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default' => '#b5345f',
+			'css'     => array(
+				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a' => array(
+					'background-color' => '%1$s',
+				),
+			),
 		),
 		'button_text_color' => array(
 			'default' => '#ffffff',
