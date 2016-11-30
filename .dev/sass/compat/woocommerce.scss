@@ -164,3 +164,11 @@ li#woocommerce-cart-menu-item li.mini_cart_item a {
 	}
 
 }
+
+@media #{$small-only} {
+
+	.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart .cart_list li.mini_cart_item a:nth-child(2) {
+		text-align: left;
+	}
+
+}
