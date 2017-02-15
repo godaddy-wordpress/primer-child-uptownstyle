@@ -199,7 +199,8 @@ body,
 button,
 input,
 select,
-textarea {
+textarea,
+.select2-container .select2-choice {
   color: #0b3954;
   font-family: "Playfair Display", "Helvetica Neue", sans-serif;
   font-weight: normal;
@@ -211,7 +212,8 @@ textarea {
     button,
     input,
     select,
-    textarea {
+    textarea,
+    .select2-container .select2-choice {
       font-size: 14.4px;
       font-size: 0.9rem; } }
 
