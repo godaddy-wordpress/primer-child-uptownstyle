@@ -174,12 +174,6 @@ function uptown_colors( $colors ) {
 		),
 		'button_color' => array(
 			'default' => '#b5345f',
-			'css'     => array(
-				'.woocommerce-cart-menu-item .woocommerce.widget_shopping_cart p.buttons a,
-				.woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover' => array(
-					'background-color' => '%1$s',
-				),
-			),
 		),
 		'button_text_color' => array(
 			'default' => '#ffffff',

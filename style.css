@@ -2329,6 +2329,9 @@ body.no-max-width .site-info-wrapper .site-info {
   width: 55%;
   margin-right: 0; }
 
+.woocommerce-page table.variations tr:hover td {
+  background-color: transparent; }
+
 .woocommerce-page table.cart img {
   width: 100%;
   max-width: 75px;
