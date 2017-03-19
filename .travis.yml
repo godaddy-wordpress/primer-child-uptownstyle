@@ -25,3 +25,5 @@ deploy:
   on:
     tags: true
     repo: godaddy/wp-uptown-style-theme
+  skip_cleanup: true
+  overwrite: true
