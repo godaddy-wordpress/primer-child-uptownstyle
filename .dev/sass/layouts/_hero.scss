@@ -1,3 +1,16 @@
+.site-header {
+
+	+.hero {
+
+		#wp-custom-header {
+
+			img {
+				display: none;
+			}
+		}
+	}
+}
+
 .site-header.video-header {
 
 	+.hero {
@@ -16,7 +29,6 @@
 		#wp-custom-header {
 			position: absolute;
 			height: 100vh;
-			margin-top: -30vh;
 			top: 0;
 			left: 0;
 
@@ -26,11 +38,7 @@
 		}
 
 		#wp-custom-header-video-button {
-			position: absolute;
-			bottom: 0.5em;
-			left: 1em;
-			opacity: 0.5;
-			z-index: 11;
+			display: none;
 		}
 
 		iframe#wp-custom-header-video {
