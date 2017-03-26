@@ -18,6 +18,13 @@
 		.site-title-wrapper,
 		.hero {
 			@include span(12);
+
+			#wp-custom-header {
+
+				img {
+					display: none;
+				}
+			}
 		}
 
 		@media #{$medium-up} {
