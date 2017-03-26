@@ -24,7 +24,7 @@ function uptown_move_elements() {
 
 	add_action( 'primer_after_header', 'primer_add_hero',               7 );
 	add_action( 'primer_header',       'primer_add_primary_navigation', 11 );
-	add_action( 'primer_hero',         'primer_video_header',           3 );
+	add_action( 'primer_pre_hero',     'primer_video_header',           3 );
 
 	if ( ! is_front_page() || ! is_active_sidebar( 'hero' ) ) {
 

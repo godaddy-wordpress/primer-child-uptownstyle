@@ -1626,6 +1626,7 @@ body.no-max-width .page-title-container .page-header {
   overflow: hidden; }
   .site-header.video-header + .hero .hero-inner,
   .site-header.video-header + .hero aside.primer-hero-text-widget {
+    position: relative;
     width: 100%;
     z-index: 5; }
   .site-header.video-header + .hero #wp-custom-header {
