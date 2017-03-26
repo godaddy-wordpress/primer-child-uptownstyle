@@ -1546,9 +1546,6 @@ body.page-template-page-builder-no-header .content-area {
       float: left;
       margin-left: 1.38889%;
       margin-right: 1.38889%; }
-      .site-header .row .site-title-wrapper #wp-custom-header img,
-      .site-header .row .hero #wp-custom-header img {
-        display: none; }
     @media only screen and (min-width: 40.063em) {
       .site-header .row .hero {
         width: 55.55556%;
@@ -1658,6 +1655,8 @@ body.no-max-width .page-title-container .page-header {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat; }
+  .hero #wp-custom-header img {
+    display: none; }
   .hero .hero-inner {
     border: 3px solid rgba(255, 255, 255, 0.5);
     padding: 20px; }

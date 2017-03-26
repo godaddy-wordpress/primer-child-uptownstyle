@@ -10,6 +10,13 @@
 	background-position: center top;
 	background-repeat: no-repeat;
 
+	#wp-custom-header {
+
+		img {
+			display: none;
+		}
+	}
+
 	.hero-inner {
 		border: 3px solid rgba(255, 255, 255, 0.5);
 		padding: 20px;
