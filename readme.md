@@ -1,15 +1,17 @@
-=== Uptown Style ===
-Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
-Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
-Requires at least: 4.4
-Tested up to:      4.7
-Stable tag:        1.0.0
-License:           GPL-2.0
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+# Uptown Style #
+**Contributors:** [godaddy](https://profiles.wordpress.org/godaddy), [fjarrett](https://profiles.wordpress.org/fjarrett), [jonathanbardo](https://profiles.wordpress.org/jonathanbardo), [eherman24](https://profiles.wordpress.org/eherman24)  
+**Tags:**              [custom-background](https://wordpress.org/themes/tags/custom-background/), [custom-colors](https://wordpress.org/themes/tags/custom-colors/), [custom-header](https://wordpress.org/themes/tags/custom-header/), [custom-menu](https://wordpress.org/themes/tags/custom-menu/), [editor-style](https://wordpress.org/themes/tags/editor-style/), [featured-images](https://wordpress.org/themes/tags/featured-images/), [fixed-layout](https://wordpress.org/themes/tags/fixed-layout/), [flexible-header](https://wordpress.org/themes/tags/flexible-header/), [fluid-layout](https://wordpress.org/themes/tags/fluid-layout/), [left-sidebar](https://wordpress.org/themes/tags/left-sidebar/), [light](https://wordpress.org/themes/tags/light/), [one-column](https://wordpress.org/themes/tags/one-column/), [responsive-layout](https://wordpress.org/themes/tags/responsive-layout/), [right-sidebar](https://wordpress.org/themes/tags/right-sidebar/), [rtl-language-support](https://wordpress.org/themes/tags/rtl-language-support/), [sticky-post](https://wordpress.org/themes/tags/sticky-post/), [threaded-comments](https://wordpress.org/themes/tags/threaded-comments/), [three-columns](https://wordpress.org/themes/tags/three-columns/), [translation-ready](https://wordpress.org/themes/tags/translation-ready/), [two-columns](https://wordpress.org/themes/tags/two-columns/)  
+**Requires at least:** 4.4  
+**Tested up to:**      4.7  
+**Stable tag:**        1.0.0  
+**License:**           GPL-2.0  
+**License URI:**       https://www.gnu.org/licenses/gpl-2.0.html  
 
 Uptown Style is a GoDaddy Primer child theme with elegance and class.
 
-== Description ==
+[![Build Status](https://travis-ci.org/godaddy/wp-uptown-style-theme.svg?branch=master)](https://travis-ci.org/godaddy/wp-uptown-style-theme) [![StyleCI Status](https://styleci.io/repos/61812792/shield?branch=master&style=flat)](https://styleci.io/repos/61812792) [![devDependencies Status](https://david-dm.org/godaddy/wp-uptown-style-theme/master/dev-status.svg)](https://david-dm.org/godaddy/wp-uptown-style-theme/master?type=dev) [![License](https://img.shields.io/badge/license-GPL--2.0-brightgreen.svg)](https://github.com/godaddy/wp-uptown-style-theme/blob/master/license.txt) [![PHP >= 5.2](https://img.shields.io/badge/php->= 5.2-8892bf.svg)](https://secure.php.net/supported-versions.php) [![WordPress >= 4.4](https://img.shields.io/badge/wordpress->= 4.4-blue.svg)](https://wordpress.org/download/release-archive/)  
+
+## Description ##
 
 Uptown Style is a GoDaddy Primer child theme with elegance and class.
 
@@ -50,7 +52,7 @@ Uptown Style is a GoDaddy Primer child theme with elegance and class.
 
 You can fork and contribute to Uptown Style by visiting [our public repo on GitHub](https://github.com/godaddy/wp-uptown-style-theme).
 
-== Installation ==
+## Installation ##
 
 1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Uptown Style** in the search form and press the **Enter** key on your keyboard.
@@ -58,7 +60,7 @@ You can fork and contribute to Uptown Style by visiting [our public repo on GitH
 4. In your admin panel, navigate to **Appearance > Customize**.
 5. Put the finishing touches on your website by adding a logo, header image, and custom colors.
 
-== Copyright ==
+## Copyright ##
 
 Uptown Style WordPress theme, Copyright 2016 GoDaddy Operating Company, LLC.
 Uptown Style is distributed under the terms of the GNU GPL.
@@ -79,17 +81,17 @@ Genericons icon font, Copyright 2013 Automattic, Inc.
 License: GPL-2.0 (or later)
 Source: https://genericons.com/
 
-== Frequently Asked Questions ==
+## Frequently Asked Questions ##
 
 TODO
 
-== Developer Tools ==
+## Developer Tools ##
 
 TODO
 
-== Changelog ==
+## Changelog ##
 
-= 1.1.0 =
+### 1.1.0 ###
 
 * New: Added priorities to hooks for Primer 1.6.0 compatibility. @props [evanherman](https://github.com/EvanHerman)
 * New: Added video header styles. Requires Primer 1.7.0. @props [evanherman](https://github.com/EvanHerman)
@@ -98,9 +100,8 @@ TODO
 * Tweak: Various WooCommerce style adjustments, including i10n site specific tweaks. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Adjusted mobile device page title styles. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Added word-wrap to the body to prevent text overflow. @props [evanherman](https://github.com/EvanHerman)
-* Tweak: Adjusted select2 font size. @props [fjarrett](https://github.com/fjarrett)
 * Fix: Prevent Uptown Style from overriding the pointer styles. @props [evanherman](https://github.com/EvanHerman)
 
-= 1.0.0 =
+### 1.0.0 ###
 
 * Initial release.
