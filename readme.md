@@ -100,6 +100,7 @@ TODO
 * Tweak: Various WooCommerce style adjustments, including i10n site specific tweaks. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Adjusted mobile device page title styles. @props [evanherman](https://github.com/EvanHerman)
 * Tweak: Added word-wrap to the body to prevent text overflow. @props [evanherman](https://github.com/EvanHerman)
+* Tweak: Adjusted select2 font size. @props [fjarrett](https://github.com/fjarrett)
 * Fix: Prevent Uptown Style from overriding the pointer styles. @props [evanherman](https://github.com/EvanHerman)
 
 ### 1.0.0 ###
