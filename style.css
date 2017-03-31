@@ -448,6 +448,14 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
+.nf-response-msg,
+.widget-area .nf-response-msg {
+  font-weight: bold; }
+  .nf-response-msg p:first-child,
+  .widget-area .nf-response-msg p:first-child {
+    font-style: italic;
+    font-weight: normal; }
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1588,6 +1596,9 @@ body.page-template-page-builder-no-header .content-area {
     margin: 0;
     font-weight: 300;
     font-size: 3rem; }
+    @media only screen and (max-width: 40.063em) {
+      .page-title-container .page-header h1 {
+        font-size: 2rem; } }
 
 body.no-max-width .page-title-container .page-header {
   max-width: none; }
@@ -1619,6 +1630,32 @@ body.no-max-width .page-title-container .page-header {
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
+.site-header.video-header + .hero {
+  background-color: #000;
+  color: #000;
+  position: relative;
+  overflow: hidden; }
+  .site-header.video-header + .hero .hero-inner,
+  .site-header.video-header + .hero aside.primer-hero-text-widget {
+    position: relative;
+    width: 100%;
+    z-index: 5; }
+  .site-header.video-header + .hero #wp-custom-header {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto; }
+    .site-header.video-header + .hero #wp-custom-header img {
+      display: none; }
+  .site-header.video-header + .hero #wp-custom-header-video-button {
+    display: none; }
+  .site-header.video-header + .hero iframe#wp-custom-header-video {
+    height: 100%;
+    max-width: 100%; }
+
 .hero {
   color: white;
   clear: both;
@@ -1629,6 +1666,8 @@ body.no-max-width .page-title-container .page-header {
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat; }
+  .hero #wp-custom-header img {
+    display: none; }
   .hero .hero-inner {
     border: 3px solid rgba(255, 255, 255, 0.5);
     padding: 20px; }
