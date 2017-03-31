@@ -73,6 +73,10 @@
 			margin: 0;
 			font-weight: 300;
 			font-size: 3rem;
+
+			@media #{$small-only} {
+				font-size: 2rem;
+			}
 		}
 	}
 }

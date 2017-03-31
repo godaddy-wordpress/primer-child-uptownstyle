@@ -1596,6 +1596,9 @@ body.page-template-page-builder-no-header .content-area {
     margin: 0;
     font-weight: 300;
     font-size: 3rem; }
+    @media only screen and (max-width: 40.063em) {
+      .page-title-container .page-header h1 {
+        font-size: 2rem; } }
 
 body.no-max-width .page-title-container .page-header {
   max-width: none; }
