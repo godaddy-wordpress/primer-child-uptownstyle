@@ -85,11 +85,13 @@ body.no-max-width .footer-widget-area {
 		@include container($container-size);
 	}
 
+	.privacy-policy-link,
 	.site-info-text {
 		font-size: 90%;
 		line-height: 38px;
 	}
 
+	.privacy-policy-link,
 	.site-info-text,
 	.footer-nav,
 	.social-menu {
