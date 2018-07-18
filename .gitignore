@@ -1,4 +1,5 @@
 node_modules
+build
 /.DS_Store
 /.dev/.DS_Store
 /.dev/img/.DS_Store
