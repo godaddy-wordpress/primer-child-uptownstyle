@@ -2,12 +2,14 @@
 >>> Gutenberg:
 --------------------------------------------------------------*/
 body.customize-support {
+	overflow-x: hidden;
+
 	.wp-block-cover-image {
 		margin-bottom: 1.5rem;
 	}
 
 	.alignfull {
-		width: 100vw;
+		width: 101vw;
 		position: relative;
 		left: 50%;
 		right: 50%;
