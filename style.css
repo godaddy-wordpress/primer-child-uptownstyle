@@ -1,11 +1,10 @@
-@charset "UTF-8";
 /**
  * Theme Name: Uptown Style
  * Theme URI: https://github.com/godaddy/wp-uptown-style-theme
  * Author: GoDaddy
  * Author URI: https://www.godaddy.com/
  * Description: Uptown Style is a Primer child theme with elegance and class.
- * Version: 1.1.0
+ * Version: 1.1.1
  * License: GPL-2.0
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: uptown-style
@@ -1815,9 +1814,11 @@ body.no-max-width .footer-widget-area {
       content: " ";
       display: block;
       clear: both; }
+  .site-info-wrapper .privacy-policy-link,
   .site-info-wrapper .site-info-text {
     font-size: 90%;
     line-height: 38px; }
+  .site-info-wrapper .privacy-policy-link,
   .site-info-wrapper .site-info-text,
   .site-info-wrapper .footer-nav,
   .site-info-wrapper .social-menu {
@@ -2195,6 +2196,20 @@ body.no-max-width .site-info-wrapper .site-info {
   .comments-area input:not(.submit),
   .comments-area textarea {
     width: 100%; }
+  .comments-area .comment-form-cookies-consent {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    line-height: 16px; }
+    .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+      display: inline;
+      width: auto;
+      margin: 0 10px 0 0; }
+      @media only screen and (max-width: 40.063em) {
+        .comments-area .comment-form-cookies-consent #wp-comment-cookies-consent {
+          margin-top: 2px; } }
 
 .comment-list {
   padding: 0;
