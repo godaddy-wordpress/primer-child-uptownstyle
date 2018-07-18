@@ -1,104 +1,63 @@
 /*--------------------------------------------------------------
 >>> Gutenberg:
 --------------------------------------------------------------*/
-.wp-block-cover-image {
-	margin-bottom: 1.5rem;
-}
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-text.alignfull,
-.wp-block-gallery.alignfull,
-.wp-block-text-columns.alignfull {
-	margin-left: -25%;
-	width: 151.38889%;
-
-	figcaption {
-		padding: 0 3.375em;
+body.customize-support {
+	.wp-block-cover-image {
+		margin-bottom: 1.5rem;
 	}
 
-	@media #{$medium-down} {
-		margin-left: -1.4%;
-		width: calc( 102.8% + 15px );
+	.alignfull {
+		width: 100vw;
+		position: relative;
+		left: 50%;
+		right: 50%;
+		margin-left: -50vw;
+		margin-right: -50vw;
 
-		figcaption {
-			padding: 0 2.375em;
+		img {
+			width: 100%;
 		}
 	}
 
-	@media #{$small-only} {
-		margin-left: calc( -1rem - 1.38889% );
-		width: calc( 102.77778% + 2rem );
-
-		figcaption {
-			padding: 0 1em;
-		}
-	}
-}
-
-.wp-block-cover-image.alignfull,
-.wp-block-image.alignfull,
-.wp-block-cover-image.alignwide,
-.wp-block-image.alignwide {
-	img {
+	.alignwide {
+		margin-left: 0;
+		margin-right: 0;
 		width: 100%;
 	}
-}
 
-.wp-block-cover-image.alignwide,
-.wp-block-image.alignwide,
-.wp-block-cover-text.alignwide,
-.wp-block-image.alignwide,
-.wp-block-gallery.alignwide,
-.wp-block-text-columns.alignwide {
-	margin-left: -0.694445%;
-	width: calc( 100% + 1.38889% );
-}
+	.wp-block-image,
+	.wp-block-gallery,
+	.wp-block-video,
+	.wp-block-quote,
+	.wp-block-text-columns,
+	.entry-content ul,
+	.entry-content ol,
+	.wp-block-cover-text {
+		&.alignleft {
+			margin: 0 1em 0.5em 0;
+		}
 
-.wp-block-image,
-.wp-block-gallery,
-.wp-block-video,
-.wp-block-quote,
-.wp-block-text-columns,
-.entry-content ul,
-.entry-content ol,
-.wp-block-cover-text {
-	&.alignleft {
-		margin: 0 1em 0.5em 0;
-	}
+		&.alignright {
+			margin: 0 0 0.5em 1em;
+		}
 
-	&.alignright {
-		margin: 0 0 0.5em 1em;
-	}
+		&.alignleft,
+		&.alignright {
+			max-width: 40%;
+			width: 100%;
 
-	&.alignleft,
-	&.alignright {
-		max-width: 40%;
-		@media #{$small-only} {
-			max-width: 100%;
-			margin-left: 0;
-			margin-right: 0;
+			img {
+				width: inherit;
+			}
 		}
 	}
-}
 
-.wp-block-pullquote {
-	p {
-		margin: 1rem 0 1rem 0;
-	}
-}
+	.wp-block-gallery {
+		margin-left: 0;
+		margin-right: 0;
 
-body.customize-support {
-	overflow-x: hidden;
-
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6,
-	.site-title,
-	.page-title {
-		clear: none;
+		&.is-cropped .blocks-gallery-item img {
+			height: auto;
+		}
 	}
 }
