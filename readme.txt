@@ -3,6 +3,7 @@ Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
 Tested up to:      4.9
+Requires PHP:      5.6.0
 Stable tag:        1.1.2
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,7 +53,7 @@ You can fork and contribute to Uptown Style by visiting [our public repo on GitH
 
 == Installation ==
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Uptown Style** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Uptown Style on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
@@ -75,21 +76,9 @@ GNU General Public License for more details.
 
 Uptown Style bundles the following third-party resources:
 
-Genericons icon font, Copyright 2013 Automattic, Inc.
-License: GPL-2.0 (or later)
-Source: https://genericons.com/
-
 Stock photography, Unsplash
 License: Creative Commons Zero
 Source: https://unsplash.com/photos/SWzLDZqfG9I/
-
-== Frequently Asked Questions ==
-
-TODO
-
-== Developer Tools ==
-
-TODO
 
 == Changelog ==
 
