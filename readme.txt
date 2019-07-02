@@ -84,7 +84,23 @@ Stock photography, Unsplash
 License: Creative Commons Zero
 Source: https://unsplash.com/photos/SWzLDZqfG9I/
 
+Stock photography, Pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/interior-of-house-254874/
+
+Stock photography, Pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/close-up-of-pen-on-paper-254860/
+
+Stock photography, Pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/table-and-chairs-at-home-254870/
+
 == Changelog ==
+
+= 1.1.3 =
+
+* New: Add stock photography attribution in readme.txt for release to WordPress.org. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.1.2 =
 
