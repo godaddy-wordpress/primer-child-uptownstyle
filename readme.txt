@@ -2,7 +2,8 @@
 Contributors:      godaddy, fjarrett, jonathanbardo, eherman24
 Tags:              custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, fixed-layout, flexible-header, fluid-layout, left-sidebar, light, one-column, responsive-layout, right-sidebar, rtl-language-support, sticky-post, threaded-comments, three-columns, translation-ready, two-columns
 Requires at least: 4.4
-Tested up to:      4.9
+Tested up to:      5.2
+Requires PHP:      5.6.0
 Stable tag:        1.1.2
 License:           GPL-2.0
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,7 +53,7 @@ You can fork and contribute to Uptown Style by visiting [our public repo on GitH
 
 == Installation ==
 
-1. In your admin panel, nagivate to **Appearance > Themes** and click the **Add New** button.
+1. In your admin panel, navigate to **Appearance > Themes** and click the **Add New** button.
 2. Type **Uptown Style** in the search form and press the **Enter** key on your keyboard.
 3. Click the **Activate** button to begin using Uptown Style on your website.
 4. In your admin panel, navigate to **Appearance > Customize**.
@@ -73,25 +74,33 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Uptown Style bundles the following third-party resources:
+Uptown Style is a child theme of Primer:
 
-Genericons icon font, Copyright 2013 Automattic, Inc.
-License: GPL-2.0 (or later)
-Source: https://genericons.com/
+Primer WordPress Theme, Copyright 2017 GoDaddy Operating Company, LLC. Primer is distributed under the terms of the GNU GPL
+
+Uptown Style bundles the following third-party resources:
 
 Stock photography, Unsplash
 License: Creative Commons Zero
 Source: https://unsplash.com/photos/SWzLDZqfG9I/
 
-== Frequently Asked Questions ==
+Stock photography, Pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/interior-of-house-254874/
 
-TODO
+Stock photography, Pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/close-up-of-pen-on-paper-254860/
 
-== Developer Tools ==
-
-TODO
+Stock photography, Pexels
+License: Creative Commons Zero
+Source: https://www.pexels.com/photo/table-and-chairs-at-home-254870/
 
 == Changelog ==
+
+= 1.1.3 =
+
+* New: Add stock photography attribution in readme.txt for release to WordPress.org. @props [evanherman](https://github.com/EvanHerman)
 
 = 1.1.2 =
 
