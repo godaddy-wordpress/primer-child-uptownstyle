@@ -4,3 +4,4 @@ build
 /.dev/.DS_Store
 /.dev/img/.DS_Store
 /.dev/local-url
+vendor/
