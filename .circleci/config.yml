@@ -196,7 +196,7 @@ jobs:
           command: |
             go get -u github.com/tcnksm/ghr
       - run:
-          name: Install rsync
+          name: Install rsync 
           command: sudo apt install rsync
       - run:
           name: Install node packages
